@@ -1,0 +1,33 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity Relogio is
+    generic (
+        larguraBarramentoEnderecos  : natural := 8;
+        larguraBarramentoDados      : natural := 4;
+    );
+    port
+    (
+        CLOCK_50 : IN STD_LOGIC;
+    );
+end entity;
+
+architecture estrutural of Relogio is
+begin	 
+    ROM : entity work.rom 
+    port map
+    (
+          Endereco => sig_endereco,
+          Dado => sig_instrucao
+    );
+	 
+	PR: entity work.Processador 	 
+	port map
+	(
+		CLK => CLOCK_50,
+		Endereco => sig_instrucao(7 downto 0),
+		Opcode => sig_instrucao(11 downto 8),
+		OutEnd => sig_endereco
+	);
+	 
+end architecture;
