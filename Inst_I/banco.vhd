@@ -21,7 +21,7 @@ entity banco is
 --
         dadoEscritaC    : in std_logic_vector((larguraDados-1) downto 0);
 --
-        escreveC        : in std_logic := '0';
+        escreveC        : in std_logic;
         saidaA          : out std_logic_vector((larguraDados -1) downto 0);
         saidaB          : out std_logic_vector((larguraDados -1) downto 0)
     );

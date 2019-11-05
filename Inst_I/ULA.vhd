@@ -21,9 +21,10 @@ entity ula is
 	(
 		A : in std_logic_vector (largura_Dados-1 downto 0);
 		B : in std_logic_vector (largura_Dados-1 downto 0);
-		func : in std_logic_vector (1 downto 0);
-		C : out std_logic_vector (largura_Dados-1 downto 0) --É um endereço que vai p/ ram
-		-- Flag
+		func : in std_logic_vector (2 downto 0);
+		C : out std_logic_vector (largura_Dados-1 downto 0); --É um endereço que vai p/ ram
+		-- Flags
+		Overflow,Negative,Zero,CarryOut : out std_logic
 	);
 end ula;
 
@@ -32,13 +33,20 @@ end ula;
 -- Use Clause(s) (optional)
 
 architecture Arch of ula is	
-	constant Add : std_logic_vector(1 downto 0) := "01";
-	constant Sub : std_logic_vector(1 downto 0) := "11";
-			
+	constant Add : std_logic_vector(2 downto 0) := "010";
+	constant Sub : std_logic_vector(2 downto 0) := "110";	
+	constant Ande : std_logic_Vector(2 downto 0) := "000";
+	constant Ore: std_logic_vector(2 downto 0) := "001";
+	constant Slt: std_logic_vector(2 downto 0) := "111";
+	signal temp : std_logic_vector(31 downto 0);
+	
 begin
 	
-	C <= std_logic_vector(unsigned(A) + unsigned(B)) when (func = Add) else
-		std_logic_vector(unsigned(A) - unsigned(B)) when (func = Sub) else "00000000000000000000000000000000";
-	
-
+	temp <= std_logic_vector(unsigned(A) + unsigned(B)) when (func = Add) else
+		std_logic_vector(unsigned(A) - unsigned(B)) when (func = Sub) or (func = Slt) else
+		(A and B) when (func = Ande) else
+		(A or B) when (func = Ore) else "00000000000000000000000000000000";
+		
+		--Falta saber como fazer as flags e passar o res pra C, nao sei se precisa mudar algo
+		
 end Arch;

@@ -1,0 +1,13 @@
+use ieee.numeric_std.all;
+
+entity UCULA is
+
+	port
+	(
+		opcode : in std_logic_vector (5 downto 0);
+		funct: in std_logic_vector (5 downto 0);
+		opULA1: in std_logic;
+		opULA2: in std_logic;
+		ULA_func : out std_logic_vector (2 downto 0)
+	);
+end UCULA;

@@ -8,6 +8,7 @@ entity Processador is
 		CLK : in std_logic;
 		End_rt: in std_logic_vector(4 downto 0);
 		End_rs: in std_logic_vector(4 downto 0);
+		End_rd : in std_logic_vector(4 downto 0);
 		Imediato: in std_logic_vector(15 downto 0);
 		Opcode: in std_logic_vector(5 downto 0);
       SW : IN STD_LOGIC_VECTOR(17 downto 0);
@@ -30,6 +31,15 @@ signal habilitaWRam : std_logic;
 signal saidaRAM : std_logic_vector(31 downto 0);
 signal dadoLidoReg2 : std_logic_vector(31 downto 0);
 signal saida_somador2 : std_logic_Vector(31 downto 0);
+signal Habilita_MuxEntradaULA : std_logic;
+signal Habilita_MuxSaidaULA : std_logic;
+signal Habilita_MuxEntradaBanco : std_logic;
+signal saidaMuxEULA : std_logic_Vector(31 downto 0);
+signal saidaMuxSULA : std_logic_Vector(31 downto 0);
+signal saidaMuxEBC : std_logic_Vector(4 downto 0);
+signal sig_func : std_logic_vector(5 downto 0);
+signal sig_func_ucula : std_logic_vector(2 downto 0);
+
 
 begin
 
@@ -56,6 +66,33 @@ begin
 			 sel => mux_jump,
 			 X => saidaMuxJump
 		 );
+
+		 Mux_EULA: entity work.mux32
+		 port map
+		 (
+			 A => dadoLidoReg2,
+			 B => saida_extensor,		 
+			 sel => Habilita_MuxEntradaULA,
+			 X => saidaMuxEULA
+		 );
+		 
+		 Mux_SULA: entity work.mux32
+		 port map
+		 (
+			 A => saidaULA,
+			 B => saidaRAM,		 
+			 sel => Habilita_MuxSaidaULA,
+			 X => saidaMuxSULA
+		 );
+		 
+		 Mux_EBC: entity work.mux5
+		 port map
+		 (
+			 A => End_rt,
+			 B => End_rd,		 
+			 sel => Habilita_MuxEntradaBanco,
+			 X => saidaMuxEBC
+		 );
 		 
 		 Ext: entity work.extensor
 		 port map
@@ -77,9 +114,13 @@ begin
     port map
     (
 		opcode => Opcode,
+		ULA_func => sig_func,
 		Habilita_BancoRegistradores => habilitaBanco,
 		Habilita_WRAM => habilitaWRam,
 		Habilita_RRAM => habilitaRRam,
+		Habilita_MuxEntradaULA => Habilita_MuxEntradaULA,
+		Habilita_MuxSaidaULA => Habilita_MuxSaidaULA,
+		Habilita_MuxEntradaBanco => Habilita_MuxEntradaBanco,
 		Mux_Jump => mux_jump
     );
 	
@@ -88,8 +129,8 @@ begin
         clk => CLK,
         enderecoA => End_rs,
         enderecoB => End_rt,
-        enderecoC => End_rt,
-        dadoEscritaC  => saidaRAM,
+        enderecoC => saidaMuxEBC,
+        dadoEscritaC  => saidaMuxSULA,
         escreveC    => habilitaBanco,
 		  saidaB => dadoLidoReg2,
         saidaA      => saidaBancoReg
@@ -99,9 +140,18 @@ begin
     port map
     (
 		A => saidaBancoReg,
-		B => saida_extensor,
-		func => SW(17 downto 16),
+		B => saidaMuxEULA,
+		func => sig_func_ucula,
 		C => saidaULA
+    );
+	 
+    UC_ula : entity work.UCULA 
+    port map
+    (
+		func => Imediato(5 downto 0),
+		opALU1 => sig_func(5),
+		opALU2 => sig_func(4),
+		ULA_func => sig_func_ucula
     );
 	 
 	 RAM: entity work.ram

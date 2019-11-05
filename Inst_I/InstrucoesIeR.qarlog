@@ -1,0 +1,29 @@
+Quartus Prime Archive log --	C:/Users/victo/Documents/GitHub/Inst_I/InstrucoesIeR.qarlog
+
+Archive:	C:/Users/victo/Documents/GitHub/Inst_I/InstrucoesIeR.qar
+Date:		Fri Oct 25 01:50:53 2019
+Quartus Prime		17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/victo/Documents/GitHub/Inst_I/Inst_I.qsf
+C:/Users/victo/Documents/GitHub/Inst_I/InstrucoesI.qpf
+C:/Users/victo/Documents/GitHub/Inst_I/InstrucoesI.qsf
+C:/Users/victo/Documents/GitHub/Inst_I/Processador.vhd
+C:/Users/victo/Documents/GitHub/Inst_I/UC.vhd
+C:/Users/victo/Documents/GitHub/Inst_I/ULA.vhd
+C:/Users/victo/Documents/GitHub/Inst_I/banco.vhd
+C:/Users/victo/Documents/GitHub/Inst_I/extensor.vhd
+C:/Users/victo/Documents/GitHub/Inst_I/mux32.vhd
+C:/Users/victo/Documents/GitHub/Inst_I/mux5.vhd
+C:/Users/victo/Documents/GitHub/Inst_I/muxPC.vhd
+C:/Users/victo/Documents/GitHub/Inst_I/pc.vhd
+C:/Users/victo/Documents/GitHub/Inst_I/ram.vhd
+C:/Users/victo/Documents/GitHub/Inst_I/rom.vhd
+C:/Users/victo/Documents/GitHub/Inst_I/somador.vhd
+C:/Users/victo/Documents/GitHub/Inst_I/somador2.vhd
+C:/Users/victo/Documents/GitHub/Inst_I/top.vhd
+c:/intelfpga_lite/17.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 18 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

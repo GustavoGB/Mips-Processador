@@ -31,6 +31,7 @@ begin
 		CLK => CLOCK_50,
 		End_rt => sig_instrucao(25 downto 21),
 		End_rs => sig_instrucao(20 downto 16),
+		End_rd => sig_instrucao(20 downto 16),
 		Imediato => sig_instrucao(15 downto 0),
 		Opcode => sig_instrucao(31 downto 26),
 		SW => SW,
