@@ -1,0 +1,37 @@
+Quartus Prime Archive log --	C:/Users/victo/Downloads/mips-SemUC_restored/mips.qarlog
+
+Archive:	C:/Users/victo/Downloads/mips-SemUC_restored/mips.qar
+Date:		Sun Nov 17 18:57:02 2019
+Quartus Prime		17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/victo/Downloads/mips-SemUC_restored/ROM.vhd
+C:/Users/victo/Downloads/mips-SemUC_restored/Registrador.vhd
+C:/Users/victo/Downloads/mips-SemUC_restored/UC_ULA.vhd
+C:/Users/victo/Downloads/mips-SemUC_restored/ULA.vhd
+C:/Users/victo/Downloads/mips-SemUC_restored/assignment_defaults.qdf
+C:/Users/victo/Downloads/mips-SemUC_restored/bancoRegistradores.vhd
+C:/Users/victo/Downloads/mips-SemUC_restored/clock_generator.vhd
+C:/Users/victo/Downloads/mips-SemUC_restored/constantesMIPS.vhd
+C:/Users/victo/Downloads/mips-SemUC_restored/estendeSinalGenerico.vhd
+C:/Users/victo/Downloads/mips-SemUC_restored/fluxo_dados.vhd
+C:/Users/victo/Downloads/mips-SemUC_restored/mips.qpf
+C:/Users/victo/Downloads/mips-SemUC_restored/mips.qsf
+C:/Users/victo/Downloads/mips-SemUC_restored/mips.vhd
+C:/Users/victo/Downloads/mips-SemUC_restored/muxGenerico2.vhd
+C:/Users/victo/Downloads/mips-SemUC_restored/shift2.vhd
+C:/Users/victo/Downloads/mips-SemUC_restored/shift2_imediato.vhd
+C:/Users/victo/Downloads/mips-SemUC_restored/single_port_RAM.vhd
+C:/Users/victo/Downloads/mips-SemUC_restored/soma4.vhd
+C:/Users/victo/Downloads/mips-SemUC_restored/somador.vhd
+C:/Users/victo/Downloads/mips-SemUC_restored/uc.vhd
+	======= Total: 20 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Tue Nov 19 17:56:57 2019
+Source archive file:	C:/Users/victo/Downloads/mips-SemUC_restored/mips.qar
+Archive was extracted into	C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/
+		 - successfully.
