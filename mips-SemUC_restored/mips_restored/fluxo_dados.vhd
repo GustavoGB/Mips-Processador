@@ -23,6 +23,7 @@ end entity;
 
 architecture estrutural of fluxo_dados is
     signal wb_saida_mux_rd_rt : std_logic_vector(REGBANK_ADDR_WIDTH-1 downto 0);
+	 signal ex_saida_mux_rd_rt : std_logic_vector(REGBANK_ADDR_WIDTH-1 downto 0);
 	 signal wb_uc_wb : std_logic_vector(2 downto 0);
 	 signal ex_RB : std_logic_vector(DATA_WIDTH-1 downto 0);
 
@@ -131,6 +132,7 @@ begin
 				clk	    <= clk,
 				enable	<= '1',
 				reset   <= '0',
+				saida_mux_rd_rt <= saida_mux_rd_rt,
 				saidaULA	    <= saidaULA,
 				Z			<= Z,
 				read_d2  <= dec_RB,
@@ -143,6 +145,7 @@ begin
 				Z_out <= ex_Z,
 				read_d2_out  <= ex_RB,
 				saidaULA_out <= ex_saidaULA
+				saida_mux_rd_rt_out <= ex_saida_mux_rd_rt,
 			);
 	 
     MEMWB: entity work.Registrador_WB
@@ -152,7 +155,7 @@ begin
 				reset   <= '0',
 				dado_ram_in	    <= dado_lido_mem,
 				saidaULA <= ex_saidaULA,
-				saida_mux_rd_rt <= saida_mux_rd_rt,
+				saida_mux_rd_rt <= ex_saida_mux_rd_rt,
 				uc_wb <= ex_uc_wb,
 				uc_wb_out <= wb_uc_wb,
 				dado_ram_out	<= wb_dado_lido_mem,

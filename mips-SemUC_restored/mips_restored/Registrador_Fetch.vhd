@@ -26,7 +26,7 @@ entity Registrador_Fetch is
 end entity;
 
 architecture rtl of Registrador_Fetch is
-	signal data_s : std_logic_vector(NUM_BITS - 1 downto 0) := (OTHERS=>'0');
+	signal data_s, data_s2 : std_logic_vector(NUM_BITS - 1 downto 0) := (OTHERS=>'0');
 begin
 	process (clk, reset)
 		begin
@@ -39,10 +39,12 @@ begin
 			elsif (rising_edge(clk)) then
 				if (enable = '1') then
 					data_s <= data_in;
+					data_s2 <= data_in2;
 				end if;
 			end if;
 		end process;
 
 		data_out <= data_s;
+		data_out2 <= data_s2;
 
 end rtl;
