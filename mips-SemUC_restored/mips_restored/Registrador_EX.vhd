@@ -17,10 +17,24 @@ entity Registrador_EX is
 		clk	    : in std_logic;
 		enable	: in std_logic;
 		reset   : in std_logic;
-		data_in	    : in std_logic_vector(31 downto 0);
-		data_in2	    : in std_logic_vector(31 downto 0);
-		data_out	: out std_logic_vector(31 downto 0);
-		data_out2	: out std_logic_vector(31 downto 0)
+		pc	    : in std_logic_vector(31 downto 0);
+		read_d1	    : ;
+		read_d2	    : ; 
+		sig_ext		 : ;
+		inst_20		 : ;
+		inst_15 		 : ;
+		uc_wb			 : ;
+		uc_m			 : ;
+		uc_ex			 : ;
+		pc_out		 : ;
+		read_d1_out	    : ; 
+		read_d2_out	    : ;
+		sig_ext_out		 : ;
+		inst_20_out		 : ;
+		inst_15_out 		 : ;
+		uc_wb_out			 : ;
+		uc_m_out			 : ;
+		uc_ex_out			 : 
 	);
 
 end entity;

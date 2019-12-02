@@ -7,16 +7,16 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/simulation/qsim
+dC:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/simulation/qsim
 Ehard_block
-Z1 w1575062037
-Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
-Z3 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 N5CzKW88F^ShIK@<7Vek12
-Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
-Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-Z7 DPx10 cycloneive 21 cycloneive_components 0 22 K8IbX`K5[Y1gJUKg2X_071
-R0
+Z0 w1575315265
+Z1 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z2 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 g8;l:a_bzlE?3R3d7zk3Z0
+Z3 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z5 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z6 DPx10 cycloneive 21 cycloneive_components 0 22 Yj^f[Ven<H;0LiK:6PWEg0
+Z7 d/home/arqcomp/mips_gobetti/Mips-Processador/mips-SemUC_restored/mips_restored/simulation/qsim
 Z8 8mips.vho
 Z9 Fmips.vho
 l0
@@ -25,21 +25,21 @@ VOgIg9T_BR7joedFDVM>H13
 !s100 A`ID_i56<Ua56=ZD=[EG=2
 Z10 OV;C;10.5b;63
 32
-Z11 !s110 1575062038
+Z11 !s110 1575315265
 !i10b 1
-Z12 !s108 1575062038.000000
+Z12 !s108 1575315265.000000
 Z13 !s90 -work|work|mips.vho|
 Z14 !s107 mips.vho|
 !i113 1
 Z15 o-work work
 Z16 tExplicit 1 CvgOpt 0
 Astructure
+R1
 R2
 R3
 R4
 R5
 R6
-R7
 DEx4 work 10 hard_block 0 22 OgIg9T_BR7joedFDVM>H13
 l64
 L50
@@ -56,16 +56,16 @@ R14
 R15
 R16
 Emips
-R1
-R3
-R7
+R0
 R2
-Z17 DPx6 altera 11 dffeas_pack 0 22 ?bDUB9Db2N8iCCALNL;CT3
+R6
+R1
+Z17 DPx6 altera 11 dffeas_pack 0 22 :S1C`o89Vbe5bV6`:6CaB3
+R3
 R4
 R5
-R6
-Z18 DPx6 altera 28 altera_primitives_components 0 22 c]VUMXSEi8Z`KM1bem<:B3
-R0
+Z18 DPx6 altera 28 altera_primitives_components 0 22 z?[99Tn<@QGNik3V1c6ah1
+R7
 R8
 R9
 l0
@@ -83,19 +83,19 @@ R14
 R15
 R16
 Astructure
-R3
-R7
 R2
+R6
+R1
 R17
+R3
 R4
 R5
-R6
 R18
 DEx4 work 4 mips 0 22 U8_KSR66bU<9MQD[>knnZ0
-l5803
+l5825
 L254
-V`B=DJ<2Gcl6Vg]3i?4I0L1
-!s100 dUA1Mh?VEVnm0R5Ie`Y3S0
+V[XW0i23Z8SOA]h578biXn1
+!s100 Z5YmH1n6_OSf[iOW98Ifb0
 R10
 32
 R11
@@ -107,29 +107,29 @@ R14
 R15
 R16
 Emips_vhd_vec_tst
-Z19 w1575062035
+Z19 w1575315263
+R4
 R5
-R6
-R0
-Z20 8Waveform1.vwf.vht
-Z21 FWaveform1.vwf.vht
+R7
+Z20 8Waveform2.vwf.vht
+Z21 FWaveform2.vwf.vht
 l0
 L31
 V9DlO:XLN`VbaHK^H76nVA3
 !s100 H7f7B9Gbj_T4GFE4m1]5D2
 R10
 32
-Z22 !s110 1575062039
+Z22 !s110 1575315266
 !i10b 1
-Z23 !s108 1575062039.000000
-Z24 !s90 -work|work|Waveform1.vwf.vht|
-Z25 !s107 Waveform1.vwf.vht|
+Z23 !s108 1575315266.000000
+Z24 !s90 -work|work|Waveform2.vwf.vht|
+Z25 !s107 Waveform2.vwf.vht|
 !i113 1
 R15
 R16
 Amips_arch
+R4
 R5
-R6
 Z26 DEx4 work 16 mips_vhd_vec_tst 0 22 9DlO:XLN`VbaHK^H76nVA3
 l70
 L33

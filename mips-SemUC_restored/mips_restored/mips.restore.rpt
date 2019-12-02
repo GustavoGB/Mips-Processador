@@ -1,6 +1,6 @@
 Restore Archived Project report for mips
-Fri Nov 29 19:45:37 2019
-Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Mon Dec  2 16:20:38 2019
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
 ---------------------
@@ -17,7 +17,7 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2017  Intel Corporation. All rights reserved.
+Copyright (C) 2018  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -36,7 +36,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------+
 ; Restore Archived Project Summary                                        ;
 +---------------------------------+---------------------------------------+
-; Restore Archived Project Status ; Successful - Fri Nov 29 19:45:37 2019 ;
+; Restore Archived Project Status ; Successful - Mon Dec  2 16:20:38 2019 ;
 ; Revision Name                   ; mips                                  ;
 ; Top-level Entity Name           ; mips                                  ;
 ; Family                          ; Cyclone IV E                          ;
@@ -46,14 +46,14 @@ refer to the applicable agreement for further details.
 +-----------------------------------+
 ; Restore Archived Project Messages ;
 +-----------------------------------+
-Info: Successfully restored 'C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips.qar' into the 'C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/' directory
+Info: Successfully restored '/home/arqcomp/mips_gobetti/Mips-Processador/mips-SemUC_restored/mips.qar' into the '/home/arqcomp/mips_gobetti/Mips-Processador/mips-SemUC_restored/mips_restored/' directory
 Info: Generated report 'mips.restore.rpt'
-Info (23030): Evaluation of Tcl script c:/intelfpga_lite/17.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
-Info: Quartus Prime Shell was successful. 0 errors, 22 warnings
-    Info: Peak virtual memory: 4828 megabytes
-    Info: Processing ended: Fri Nov 29 19:45:37 2019
+Info (23030): Evaluation of Tcl script /home/arqcomp/intelFPGA_lite/18.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 23 warnings
+    Info: Peak virtual memory: 1049 megabytes
+    Info: Processing ended: Mon Dec  2 16:20:38 2019
     Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
 
 
 +----------------+

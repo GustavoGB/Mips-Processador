@@ -37,7 +37,7 @@ architecture estrutural of fluxo_dados is
 
     -- Sinais auxiliares para a lógica do PC
     signal PC_s, PC_mais_4, PC_mais_4_mais_imediato, entrada_somador_beq : std_logic_vector(DATA_WIDTH-1 downto 0);
-
+	 signal ex_PC_mais_4_mais_imediato : std_logic_vector(DATA_WIDTH-1 downto 0);
     -- Sinais auxiliares para a RAM
     signal dado_lido_mem : std_logic_vector(DATA_WIDTH-1 downto 0);
 
@@ -52,7 +52,13 @@ architecture estrutural of fluxo_dados is
     signal sel_mux_beq : std_logic;
     signal saida_mux_ula_mem, saida_mux_banco_ula, saida_mux_beq, saida_mux_jump : std_logic_vector(DATA_WIDTH-1 downto 0);
     signal saida_mux_rd_rt : std_logic_vector(REGBANK_ADDR_WIDTH-1 downto 0);
-     
+	 signal dec_uc_wb : std_logic;
+	 signal dec_uc_m : std_logic;
+	 signal dec_uc_ex : std_logic;
+	 signal dec_RT_addr : std_logic_vector(20 downto 16);
+	 signal dec_RD_addr : std_logic_vector(15 downto 11);
+
+
     -- Controle da ULA
     signal ULActr : std_logic_vector(CTRL_ALU_WIDTH-1 downto 0);
 
@@ -76,46 +82,69 @@ architecture estrutural of fluxo_dados is
 
 begin
 
---    F/ID: entity work.Registrador_Fetch
---			port map (
---				clk	    <= clk,
---				enable	: '1',
---				reset   : '0',
---				data_in	    : instrucao_s,
---				data_in2 : PC_mais_4,
---				data_out	: inst_fetch,
---				data_out2 : fetch_PC_4
---			);
---
---    ID/EX: entity work.Registrador_EX
---			port map (
---				clk	    <= clk,
---				enable	: '1',
---				reset   : '0',
---				data_in1	    : instrucao_s, 
---				data_in2	    : instrucao_s, 
---				data_out	: 
---			);
---
---    EX/MEM: entity work.Registrador
---			port map (
---				clk	    <= clk,
---				enable	: '1',
---				reset   : '0',
---				data_in	    : instrucao_s,
---				data_out	: inst_fetch
---			);
---	 
---    MEM/WB: entity work.Registrador
---			port map (
---				clk	    <= clk,
---				enable	: '1',
---				reset   : '0',
---				data_in	    : instrucao_s,
---				data_out	: inst_fetch
---			);
+    F/ID: entity work.Registrador_Fetch
+			port map (
+				clk	    <= clk,
+				enable	: '1',
+				reset   : '0',
+				data_in	    : instrucao_s,
+				data_in2 : PC_mais_4,
+				data_out	: inst_fetch,
+				data_out2 : fetch_PC_4
+			);
+
+    ID/EX: entity work.Registrador_EX
+			port map (
+				clk	    <= clk,
+				enable	<= '1',
+				reset   <= '0',
+				pc	    <= fetch_PC_4, 
+				read_d1	    <= RA, 
+				read_d2	    <= RB, 
+				sig_ext		 <= sinal_ext,
+				inst_20		 <= RT_addr,
+				inst_15 		 <= RD_addr,
+				uc_wb			 <= escreve_RC,
+				uc_m			 <= escreve_RAM,
+				uc_ex			 <= ULAop,
+				pc_out		 <= dec_PC_mais_4,
+				read_d1_out	    <= dec_RA, 
+				read_d2_out	    <= dec_RB, 
+				sig_ext_out		 <= dec_sinal_ext,
+				inst_20_out		 <= dec_RT_addr,
+				inst_15_out 		 <= dec_RD_addr,
+				uc_wb_out			 <= dec_uc_wb,
+				uc_m_out			 <= dec_uc_m,
+				uc_ex_out			 <= dec_uc_ex
+			);
+
+    EX/MEM: entity work.Registrador_MEM
+			port map (
+				clk	    <= clk,
+				enable	<= '1',
+				reset   <= '0',
+				saidaULA	    <= saidaULA,
+				Z			<= Z,
+				read_d2  <= ,
+				uc_wb			 <= dec_uc_wb,
+				uc_m			 <= dec_uc_m,
+				PC_mais_4_mais_imediato <= PC_mais_4_mais_imediato,
+				data_out	<= inst_fetch
+				uc_wb_out			 <= ex_uc_wb,
+				uc_m_out			 <= ex_uc_m,
+				PC_mais_4_mais_imediato_out <= ex_PC_mais_4_mais_imediato
+			);
 	 
-	 instrucao <= instrucao_s; --inst_fetch;
+    MEM/WB: entity work.Registrador
+			port map (
+				clk	    <= clk,
+				enable	: '1',
+				reset   : '0',
+				data_in	    : instrucao_s,
+				data_out	: inst_fetch
+			);
+	 
+	 instrucao <= inst_fetch;
 
     sel_mux_beq <= sel_beq AND Z_out;
 
@@ -201,7 +230,7 @@ begin
         ) 
 		port map (
             endereco => PC_s(larguraROM-1 downto 0),
-            dado     => instrucao_s--inst_fetch
+            dado     => inst_fetch
         );
     
     -- RAM: escreve valor lido no registrador B no endereço de memória de acordo com a saída da ULA
@@ -289,7 +318,7 @@ begin
         )
 		port map (
             entradaA => PC_mais_4,
-            entradaB => PC_mais_4_mais_imediato,
+            entradaB => ex_PC_mais_4_mais_imediato,
             seletor  => sel_mux_beq,
             saida    => saida_mux_beq
         );
@@ -304,5 +333,6 @@ begin
             seletor  => sel_mux_jump,
             saida    => saida_mux_jump
         );
+		  
 
 end architecture;
