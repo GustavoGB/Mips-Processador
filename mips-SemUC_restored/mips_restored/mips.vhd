@@ -8,6 +8,7 @@ use work.constantesMIPS.all;
 
 entity mips is
     generic (
+		  quantidadeBotoes            : natural := 4;
         quantidadeLedsRed           : natural := 18;
         quantidadeLedsGreen         : natural := 8
     );
@@ -15,9 +16,15 @@ entity mips is
 	port
     (
         clk			            : IN  STD_LOGIC;
+		  --Botoes
+		  KEY: IN STD_LOGIC_VECTOR(quantidadeBotoes-1 DOWNTO 0);
         -- LEDS
         LEDR : OUT STD_LOGIC_VECTOR(quantidadeLedsRed-1 downto 0);
         LEDG : OUT STD_LOGIC_VECTOR(quantidadeLedsGreen-1 downto 0);
+		  --SIMULACAO
+		  saida_ULAWF : OUT STD_LOGIC_VECTOR(DATA_WIDTH-1 downto 0);
+		  pcWF : OUT STD_LOGIC_VECTOR(DATA_WIDTH-1 downto 0);
+		  ZWF : OUT STD_LOGIC;
         -- DISPLAYS 7 SEG
         HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7 : OUT STD_LOGIC_VECTOR(6 downto 0)
     );
@@ -31,12 +38,15 @@ architecture estrutural of mips is
     signal ALUop                : STD_LOGIC_VECTOR(ALU_OP_WIDTH-1 DOWNTO 0);
     signal ALUctr               : STD_LOGIC_VECTOR(CTRL_ALU_WIDTH-1 DOWNTO 0);
 	 signal saidaULA 				  : STD_LOGIC_VECTOR(31 downto 0);
-
+	 signal clk_but 				  : STD_LOGIC;
     -- Sinal de clock auxiliar para simulação
     -- signal clk  : STD_LOGIC;
 
     alias opcode : std_logic_vector(OPCODE_WIDTH-1 downto 0) is instrucao(31 DOWNTO 26);
 begin
+
+
+	 clk_but <= KEY(0);
 
     -- CLOCK generator auxiliar para simulação
     -- CG : entity work.clock_generator port map (clk	=> clk);
@@ -44,10 +54,12 @@ begin
     FD : entity work.fluxo_dados 
 	port map
 	(
-        clk	                    => clk,
+        clk	                    => clk, --clk_but,
         pontosDeControle        => pontosDeControle,
         instrucao               => instrucao,
-		  saidaULA => saidaULA
+		  saidaULA => saida_ULAWF,
+		  pcWF => pcWF,
+		  ZWF => ZWF
     );
 
     UC : entity work.uc 

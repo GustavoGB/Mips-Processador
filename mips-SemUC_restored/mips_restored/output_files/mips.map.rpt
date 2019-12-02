@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mips
-Tue Nov 19 18:32:05 2019
+Fri Nov 29 18:11:58 2019
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -71,16 +71,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Nov 19 18:32:05 2019       ;
+; Analysis & Synthesis Status        ; Successful - Fri Nov 29 18:11:58 2019       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; mips                                        ;
 ; Top-level Entity Name              ; mips                                        ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 4,100                                       ;
-;     Total combinational functions  ; 1,965                                       ;
-;     Dedicated logic registers      ; 2,263                                       ;
-; Total registers                    ; 2263                                        ;
-; Total pins                         ; 83                                          ;
+; Total logic elements               ; 4,135                                       ;
+;     Total combinational functions  ; 2,000                                       ;
+;     Dedicated logic registers      ; 2,238                                       ;
+; Total registers                    ; 2238                                        ;
+; Total pins                         ; 152                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -193,29 +193,29 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                  ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                           ; Library ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------+---------+
-; ULA.vhd                          ; yes             ; User VHDL File  ; C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/ULA.vhd                     ;         ;
-; UC_ULA.vhd                       ; yes             ; User VHDL File  ; C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/UC_ULA.vhd                  ;         ;
-; uc.vhd                           ; yes             ; User VHDL File  ; C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/uc.vhd                      ;         ;
-; somador.vhd                      ; yes             ; User VHDL File  ; C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/somador.vhd                 ;         ;
-; soma4.vhd                        ; yes             ; User VHDL File  ; C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/soma4.vhd                   ;         ;
-; single_port_RAM.vhd              ; yes             ; User VHDL File  ; C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/single_port_RAM.vhd         ;         ;
-; shift2_imediato.vhd              ; yes             ; User VHDL File  ; C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/shift2_imediato.vhd         ;         ;
-; shift2.vhd                       ; yes             ; User VHDL File  ; C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/shift2.vhd                  ;         ;
-; ROM.vhd                          ; yes             ; User VHDL File  ; C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/ROM.vhd                     ;         ;
-; Registrador.vhd                  ; yes             ; User VHDL File  ; C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/Registrador.vhd             ;         ;
-; muxGenerico2.vhd                 ; yes             ; User VHDL File  ; C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/muxGenerico2.vhd            ;         ;
-; mips.vhd                         ; yes             ; User VHDL File  ; C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/mips.vhd                    ;         ;
-; fluxo_dados.vhd                  ; yes             ; User VHDL File  ; C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/fluxo_dados.vhd             ;         ;
-; estendeSinalGenerico.vhd         ; yes             ; User VHDL File  ; C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/estendeSinalGenerico.vhd    ;         ;
-; constantesMIPS.vhd               ; yes             ; User VHDL File  ; C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/constantesMIPS.vhd          ;         ;
-; bancoRegistradores.vhd           ; yes             ; User VHDL File  ; C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/bancoRegistradores.vhd      ;         ;
-; conversorHex7SegDisplay.vhd      ; yes             ; User VHDL File  ; C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/conversorHex7SegDisplay.vhd ;         ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                          ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                   ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------+---------+
+; ULA.vhd                          ; yes             ; User VHDL File  ; C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/ULA.vhd                     ;         ;
+; UC_ULA.vhd                       ; yes             ; User VHDL File  ; C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/UC_ULA.vhd                  ;         ;
+; uc.vhd                           ; yes             ; User VHDL File  ; C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/uc.vhd                      ;         ;
+; somador.vhd                      ; yes             ; User VHDL File  ; C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/somador.vhd                 ;         ;
+; soma4.vhd                        ; yes             ; User VHDL File  ; C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/soma4.vhd                   ;         ;
+; single_port_RAM.vhd              ; yes             ; User VHDL File  ; C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/single_port_RAM.vhd         ;         ;
+; shift2_imediato.vhd              ; yes             ; User VHDL File  ; C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/shift2_imediato.vhd         ;         ;
+; shift2.vhd                       ; yes             ; User VHDL File  ; C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/shift2.vhd                  ;         ;
+; ROM.vhd                          ; yes             ; User VHDL File  ; C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/ROM.vhd                     ;         ;
+; Registrador.vhd                  ; yes             ; User VHDL File  ; C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/Registrador.vhd             ;         ;
+; muxGenerico2.vhd                 ; yes             ; User VHDL File  ; C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/muxGenerico2.vhd            ;         ;
+; mips.vhd                         ; yes             ; User VHDL File  ; C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd                    ;         ;
+; fluxo_dados.vhd                  ; yes             ; User VHDL File  ; C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/fluxo_dados.vhd             ;         ;
+; estendeSinalGenerico.vhd         ; yes             ; User VHDL File  ; C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/estendeSinalGenerico.vhd    ;         ;
+; constantesMIPS.vhd               ; yes             ; User VHDL File  ; C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/constantesMIPS.vhd          ;         ;
+; bancoRegistradores.vhd           ; yes             ; User VHDL File  ; C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/bancoRegistradores.vhd      ;         ;
+; conversorHex7SegDisplay.vhd      ; yes             ; User VHDL File  ; C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/conversorHex7SegDisplay.vhd ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -223,60 +223,53 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 4,100     ;
+; Estimated Total logic elements              ; 4,135     ;
 ;                                             ;           ;
-; Total combinational functions               ; 1965      ;
+; Total combinational functions               ; 2000      ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 1694      ;
-;     -- 3 input functions                    ; 162       ;
-;     -- <=2 input functions                  ; 109       ;
+;     -- 4 input functions                    ; 1754      ;
+;     -- 3 input functions                    ; 178       ;
+;     -- <=2 input functions                  ; 68        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 1893      ;
-;     -- arithmetic mode                      ; 72        ;
+;     -- normal mode                          ; 1880      ;
+;     -- arithmetic mode                      ; 120       ;
 ;                                             ;           ;
-; Total registers                             ; 2263      ;
-;     -- Dedicated logic registers            ; 2263      ;
+; Total registers                             ; 2238      ;
+;     -- Dedicated logic registers            ; 2238      ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 83        ;
+; I/O pins                                    ; 152       ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 2263      ;
-; Total fan-out                               ; 14361     ;
-; Average fan-out                             ; 3.27      ;
+; Maximum fan-out                             ; 2238      ;
+; Total fan-out                               ; 14596     ;
+; Average fan-out                             ; 3.21      ;
 +---------------------------------------------+-----------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                           ;
-+---------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------+-------------------------+--------------+
-; Compilation Hierarchy Node            ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                               ; Entity Name             ; Library Name ;
-+---------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------+-------------------------+--------------+
-; |mips                                 ; 1965 (0)            ; 2263 (0)                  ; 0           ; 0            ; 0       ; 0         ; 83   ; 0            ; |mips                                             ; mips                    ; work         ;
-;    |conversorHex7SegDisplay:DISPLAY0| ; 9 (9)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|conversorHex7SegDisplay:DISPLAY0            ; conversorHex7SegDisplay ; work         ;
-;    |conversorHex7SegDisplay:DISPLAY1| ; 9 (9)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|conversorHex7SegDisplay:DISPLAY1            ; conversorHex7SegDisplay ; work         ;
-;    |conversorHex7SegDisplay:DISPLAY2| ; 9 (9)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|conversorHex7SegDisplay:DISPLAY2            ; conversorHex7SegDisplay ; work         ;
-;    |conversorHex7SegDisplay:DISPLAY3| ; 9 (9)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|conversorHex7SegDisplay:DISPLAY3            ; conversorHex7SegDisplay ; work         ;
-;    |conversorHex7SegDisplay:DISPLAY4| ; 9 (9)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|conversorHex7SegDisplay:DISPLAY4            ; conversorHex7SegDisplay ; work         ;
-;    |conversorHex7SegDisplay:DISPLAY5| ; 10 (10)             ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|conversorHex7SegDisplay:DISPLAY5            ; conversorHex7SegDisplay ; work         ;
-;    |conversorHex7SegDisplay:DISPLAY6| ; 12 (12)             ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|conversorHex7SegDisplay:DISPLAY6            ; conversorHex7SegDisplay ; work         ;
-;    |fluxo_dados:FD|                   ; 1894 (11)           ; 2214 (0)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|fluxo_dados:FD                              ; fluxo_dados             ; work         ;
-;       |ROM:ROM|                       ; 22 (22)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|fluxo_dados:FD|ROM:ROM                      ; ROM                     ; work         ;
-;       |Registrador:PC|                ; 5 (5)               ; 6 (6)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|fluxo_dados:FD|Registrador:PC               ; Registrador             ; work         ;
-;       |UC_ULA:UCULA|                  ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|fluxo_dados:FD|UC_ULA:UCULA                 ; UC_ULA                  ; work         ;
-;       |ULA:ULA|                       ; 96 (96)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|fluxo_dados:FD|ULA:ULA                      ; ULA                     ; work         ;
-;       |bancoRegistradores:BR|         ; 242 (242)           ; 160 (160)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|fluxo_dados:FD|bancoRegistradores:BR        ; bancoRegistradores      ; work         ;
-;       |muxGenerico2:mux_Banco_Ula|    ; 40 (40)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|fluxo_dados:FD|muxGenerico2:mux_Banco_Ula   ; muxGenerico2            ; work         ;
-;       |muxGenerico2:mux_Ula_Memoria|  ; 36 (36)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|fluxo_dados:FD|muxGenerico2:mux_Ula_Memoria ; muxGenerico2            ; work         ;
-;       |muxGenerico2:mux_jump|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|fluxo_dados:FD|muxGenerico2:mux_jump        ; muxGenerico2            ; work         ;
-;       |single_port_RAM:RAM|           ; 1428 (1428)         ; 2048 (2048)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|fluxo_dados:FD|single_port_RAM:RAM          ; single_port_RAM         ; work         ;
-;       |soma4:Somador|                 ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|fluxo_dados:FD|soma4:Somador                ; soma4                   ; work         ;
-;       |somador:Somador_imediato|      ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|fluxo_dados:FD|somador:Somador_imediato     ; somador                 ; work         ;
-;    |uc:UC|                            ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|uc:UC                                       ; uc                      ; work         ;
-+---------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------+-------------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                     ;
++--------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------+--------------------+--------------+
+; Compilation Hierarchy Node           ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                               ; Entity Name        ; Library Name ;
++--------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------+--------------------+--------------+
+; |mips                                ; 2000 (0)            ; 2238 (0)                  ; 0           ; 0            ; 0       ; 0         ; 152  ; 0            ; |mips                                             ; mips               ; work         ;
+;    |fluxo_dados:FD|                  ; 1995 (1)            ; 2238 (0)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|fluxo_dados:FD                              ; fluxo_dados        ; work         ;
+;       |ROM:ROM|                      ; 22 (22)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|fluxo_dados:FD|ROM:ROM                      ; ROM                ; work         ;
+;       |Registrador:PC|               ; 22 (22)             ; 30 (30)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|fluxo_dados:FD|Registrador:PC               ; Registrador        ; work         ;
+;       |UC_ULA:UCULA|                 ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|fluxo_dados:FD|UC_ULA:UCULA                 ; UC_ULA             ; work         ;
+;       |ULA:ULA|                      ; 107 (107)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|fluxo_dados:FD|ULA:ULA                      ; ULA                ; work         ;
+;       |bancoRegistradores:BR|        ; 242 (242)           ; 160 (160)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|fluxo_dados:FD|bancoRegistradores:BR        ; bancoRegistradores ; work         ;
+;       |muxGenerico2:mux_Banco_Ula|   ; 39 (39)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|fluxo_dados:FD|muxGenerico2:mux_Banco_Ula   ; muxGenerico2       ; work         ;
+;       |muxGenerico2:mux_Ula_Memoria| ; 61 (61)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|fluxo_dados:FD|muxGenerico2:mux_Ula_Memoria ; muxGenerico2       ; work         ;
+;       |muxGenerico2:mux_jump|        ; 30 (30)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|fluxo_dados:FD|muxGenerico2:mux_jump        ; muxGenerico2       ; work         ;
+;       |single_port_RAM:RAM|          ; 1406 (1406)         ; 2048 (2048)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|fluxo_dados:FD|single_port_RAM:RAM          ; single_port_RAM    ; work         ;
+;       |soma4:Somador|                ; 30 (30)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|fluxo_dados:FD|soma4:Somador                ; soma4              ; work         ;
+;       |somador:Somador_imediato|     ; 34 (34)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|fluxo_dados:FD|somador:Somador_imediato     ; somador            ; work         ;
+;    |uc:UC|                           ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|uc:UC                                       ; uc                 ; work         ;
++--------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------+--------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -287,6 +280,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------+-----------------------------------------------------+
 ; fluxo_dados:FD|Registrador:PC|data_s[0]            ; Merged with fluxo_dados:FD|Registrador:PC|data_s[1] ;
 ; fluxo_dados:FD|Registrador:PC|data_s[1]            ; Stuck at GND due to stuck port data_in              ;
+; conversorHex7SegDisplay:DISPLAY6|saida7seg[6]      ; Stuck at VCC due to stuck port data_in              ;
+; conversorHex7SegDisplay:DISPLAY6|saida7seg[0..5]   ; Stuck at GND due to stuck port data_in              ;
+; conversorHex7SegDisplay:DISPLAY5|saida7seg[6]      ; Stuck at VCC due to stuck port data_in              ;
+; conversorHex7SegDisplay:DISPLAY5|saida7seg[0..5]   ; Stuck at GND due to stuck port data_in              ;
+; conversorHex7SegDisplay:DISPLAY4|saida7seg[6]      ; Stuck at VCC due to stuck port data_in              ;
+; conversorHex7SegDisplay:DISPLAY4|saida7seg[0..5]   ; Stuck at GND due to stuck port data_in              ;
+; conversorHex7SegDisplay:DISPLAY3|saida7seg[6]      ; Stuck at VCC due to stuck port data_in              ;
+; conversorHex7SegDisplay:DISPLAY3|saida7seg[0..5]   ; Stuck at GND due to stuck port data_in              ;
+; conversorHex7SegDisplay:DISPLAY2|saida7seg[6]      ; Stuck at VCC due to stuck port data_in              ;
+; conversorHex7SegDisplay:DISPLAY2|saida7seg[0..5]   ; Stuck at GND due to stuck port data_in              ;
+; conversorHex7SegDisplay:DISPLAY1|saida7seg[6]      ; Stuck at VCC due to stuck port data_in              ;
+; conversorHex7SegDisplay:DISPLAY1|saida7seg[0..5]   ; Stuck at GND due to stuck port data_in              ;
+; conversorHex7SegDisplay:DISPLAY0|saida7seg[6]      ; Stuck at VCC due to stuck port data_in              ;
+; conversorHex7SegDisplay:DISPLAY0|saida7seg[0..5]   ; Stuck at GND due to stuck port data_in              ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~166  ; Lost fanout                                         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~167  ; Lost fanout                                         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~168  ; Lost fanout                                         ;
@@ -1055,90 +1062,89 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~1059 ; Lost fanout                                         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~1060 ; Lost fanout                                         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~1061 ; Lost fanout                                         ;
-; fluxo_dados:FD|Registrador:PC|data_s[8..31]        ; Lost fanout                                         ;
-; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~135  ; Stuck at GND due to stuck port clock_enable         ;
-; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~71   ; Stuck at GND due to stuck port clock_enable         ;
-; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~103  ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~70   ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~134  ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~102  ; Stuck at GND due to stuck port clock_enable         ;
-; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~136  ; Stuck at GND due to stuck port clock_enable         ;
+; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~71   ; Stuck at GND due to stuck port clock_enable         ;
+; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~135  ; Stuck at GND due to stuck port clock_enable         ;
+; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~103  ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~72   ; Stuck at GND due to stuck port clock_enable         ;
+; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~136  ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~104  ; Stuck at GND due to stuck port clock_enable         ;
-; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~137  ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~73   ; Stuck at GND due to stuck port clock_enable         ;
+; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~137  ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~105  ; Stuck at GND due to stuck port clock_enable         ;
-; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~139  ; Stuck at GND due to stuck port clock_enable         ;
-; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~75   ; Stuck at GND due to stuck port clock_enable         ;
-; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~107  ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~74   ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~138  ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~106  ; Stuck at GND due to stuck port clock_enable         ;
-; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~140  ; Stuck at GND due to stuck port clock_enable         ;
+; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~75   ; Stuck at GND due to stuck port clock_enable         ;
+; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~139  ; Stuck at GND due to stuck port clock_enable         ;
+; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~107  ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~76   ; Stuck at GND due to stuck port clock_enable         ;
+; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~140  ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~108  ; Stuck at GND due to stuck port clock_enable         ;
-; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~141  ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~77   ; Stuck at GND due to stuck port clock_enable         ;
+; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~141  ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~109  ; Stuck at GND due to stuck port clock_enable         ;
-; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~143  ; Stuck at GND due to stuck port clock_enable         ;
-; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~79   ; Stuck at GND due to stuck port clock_enable         ;
-; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~111  ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~78   ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~142  ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~110  ; Stuck at GND due to stuck port clock_enable         ;
-; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~144  ; Stuck at GND due to stuck port clock_enable         ;
+; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~79   ; Stuck at GND due to stuck port clock_enable         ;
+; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~143  ; Stuck at GND due to stuck port clock_enable         ;
+; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~111  ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~80   ; Stuck at GND due to stuck port clock_enable         ;
+; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~144  ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~112  ; Stuck at GND due to stuck port clock_enable         ;
-; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~145  ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~81   ; Stuck at GND due to stuck port clock_enable         ;
+; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~145  ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~113  ; Stuck at GND due to stuck port clock_enable         ;
-; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~147  ; Stuck at GND due to stuck port clock_enable         ;
-; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~83   ; Stuck at GND due to stuck port clock_enable         ;
-; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~115  ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~82   ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~146  ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~114  ; Stuck at GND due to stuck port clock_enable         ;
-; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~148  ; Stuck at GND due to stuck port clock_enable         ;
+; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~83   ; Stuck at GND due to stuck port clock_enable         ;
+; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~147  ; Stuck at GND due to stuck port clock_enable         ;
+; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~115  ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~84   ; Stuck at GND due to stuck port clock_enable         ;
+; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~148  ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~116  ; Stuck at GND due to stuck port clock_enable         ;
-; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~149  ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~85   ; Stuck at GND due to stuck port clock_enable         ;
+; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~149  ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~117  ; Stuck at GND due to stuck port clock_enable         ;
-; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~151  ; Stuck at GND due to stuck port clock_enable         ;
-; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~87   ; Stuck at GND due to stuck port clock_enable         ;
-; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~119  ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~86   ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~150  ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~118  ; Stuck at GND due to stuck port clock_enable         ;
-; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~152  ; Stuck at GND due to stuck port clock_enable         ;
+; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~87   ; Stuck at GND due to stuck port clock_enable         ;
+; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~151  ; Stuck at GND due to stuck port clock_enable         ;
+; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~119  ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~88   ; Stuck at GND due to stuck port clock_enable         ;
+; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~152  ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~120  ; Stuck at GND due to stuck port clock_enable         ;
-; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~153  ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~89   ; Stuck at GND due to stuck port clock_enable         ;
+; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~153  ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~121  ; Stuck at GND due to stuck port clock_enable         ;
-; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~155  ; Stuck at GND due to stuck port clock_enable         ;
-; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~91   ; Stuck at GND due to stuck port clock_enable         ;
-; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~123  ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~90   ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~154  ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~122  ; Stuck at GND due to stuck port clock_enable         ;
-; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~156  ; Stuck at GND due to stuck port clock_enable         ;
+; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~91   ; Stuck at GND due to stuck port clock_enable         ;
+; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~155  ; Stuck at GND due to stuck port clock_enable         ;
+; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~123  ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~92   ; Stuck at GND due to stuck port clock_enable         ;
+; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~156  ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~124  ; Stuck at GND due to stuck port clock_enable         ;
-; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~157  ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~93   ; Stuck at GND due to stuck port clock_enable         ;
+; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~157  ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~125  ; Stuck at GND due to stuck port clock_enable         ;
-; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~159  ; Stuck at GND due to stuck port clock_enable         ;
-; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~95   ; Stuck at GND due to stuck port clock_enable         ;
-; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~127  ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~94   ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~158  ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~126  ; Stuck at GND due to stuck port clock_enable         ;
-; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~160  ; Stuck at GND due to stuck port clock_enable         ;
+; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~95   ; Stuck at GND due to stuck port clock_enable         ;
+; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~159  ; Stuck at GND due to stuck port clock_enable         ;
+; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~127  ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~96   ; Stuck at GND due to stuck port clock_enable         ;
+; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~160  ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~128  ; Stuck at GND due to stuck port clock_enable         ;
-; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~161  ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~97   ; Stuck at GND due to stuck port clock_enable         ;
+; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~161  ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~129  ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~98   ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~162  ; Stuck at GND due to stuck port clock_enable         ;
@@ -1152,31 +1158,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~101  ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~165  ; Stuck at GND due to stuck port clock_enable         ;
 ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~133  ; Stuck at GND due to stuck port clock_enable         ;
-; Total Number of Removed Registers = 890            ;                                                     ;
+; Total Number of Removed Registers = 915            ;                                                     ;
 +----------------------------------------------------+-----------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                                             ;
-+--------------------------------------------------+--------------------------------+-------------------------------------------------------------------------------------+
-; Register name                                    ; Reason for Removal             ; Registers Removed due to This Register                                              ;
-+--------------------------------------------------+--------------------------------+-------------------------------------------------------------------------------------+
-; fluxo_dados:FD|Registrador:PC|data_s[31]         ; Lost Fanouts                   ; fluxo_dados:FD|Registrador:PC|data_s[30], fluxo_dados:FD|Registrador:PC|data_s[29], ;
-;                                                  ;                                ; fluxo_dados:FD|Registrador:PC|data_s[28], fluxo_dados:FD|Registrador:PC|data_s[27], ;
-;                                                  ;                                ; fluxo_dados:FD|Registrador:PC|data_s[26], fluxo_dados:FD|Registrador:PC|data_s[25], ;
-;                                                  ;                                ; fluxo_dados:FD|Registrador:PC|data_s[24], fluxo_dados:FD|Registrador:PC|data_s[23], ;
-;                                                  ;                                ; fluxo_dados:FD|Registrador:PC|data_s[22], fluxo_dados:FD|Registrador:PC|data_s[21], ;
-;                                                  ;                                ; fluxo_dados:FD|Registrador:PC|data_s[20], fluxo_dados:FD|Registrador:PC|data_s[19], ;
-;                                                  ;                                ; fluxo_dados:FD|Registrador:PC|data_s[18], fluxo_dados:FD|Registrador:PC|data_s[17], ;
-;                                                  ;                                ; fluxo_dados:FD|Registrador:PC|data_s[16], fluxo_dados:FD|Registrador:PC|data_s[15], ;
-;                                                  ;                                ; fluxo_dados:FD|Registrador:PC|data_s[14], fluxo_dados:FD|Registrador:PC|data_s[13], ;
-;                                                  ;                                ; fluxo_dados:FD|Registrador:PC|data_s[12], fluxo_dados:FD|Registrador:PC|data_s[11], ;
-;                                                  ;                                ; fluxo_dados:FD|Registrador:PC|data_s[10], fluxo_dados:FD|Registrador:PC|data_s[9],  ;
-;                                                  ;                                ; fluxo_dados:FD|Registrador:PC|data_s[8]                                             ;
-; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~77 ; Stuck at GND                   ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~78,                                   ;
-;                                                  ; due to stuck port clock_enable ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~142,                                  ;
-;                                                  ;                                ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~110                                   ;
-+--------------------------------------------------+--------------------------------+-------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                            ;
++--------------------------------------------------+--------------------------------+----------------------------------------------------+
+; Register name                                    ; Reason for Removal             ; Registers Removed due to This Register             ;
++--------------------------------------------------+--------------------------------+----------------------------------------------------+
+; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~75 ; Stuck at GND                   ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~76,  ;
+;                                                  ; due to stuck port clock_enable ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~140, ;
+;                                                  ;                                ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~108  ;
+; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~77 ; Stuck at GND                   ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~78,  ;
+;                                                  ; due to stuck port clock_enable ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~142, ;
+;                                                  ;                                ; fluxo_dados:FD|bancoRegistradores:BR|bancoReg~110  ;
++--------------------------------------------------+--------------------------------+----------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -1184,9 +1181,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 2263  ;
-; Number of registers using Synchronous Clear  ; 2     ;
-; Number of registers using Synchronous Load   ; 12    ;
+; Total registers                              ; 2238  ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 11    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 2208  ;
@@ -1194,24 +1191,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
-; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |mips|fluxo_dados:FD|Registrador:PC|data_s[27]              ;
-; 3:1                ; 21 bits   ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; Yes        ; |mips|fluxo_dados:FD|Registrador:PC|data_s[16]              ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |mips|conversorHex7SegDisplay:DISPLAY0|saida7seg[0]         ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |mips|conversorHex7SegDisplay:DISPLAY1|saida7seg[0]         ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |mips|conversorHex7SegDisplay:DISPLAY2|saida7seg[5]         ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |mips|conversorHex7SegDisplay:DISPLAY3|saida7seg[5]         ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |mips|conversorHex7SegDisplay:DISPLAY4|saida7seg[5]         ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |mips|conversorHex7SegDisplay:DISPLAY5|saida7seg[0]         ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |mips|conversorHex7SegDisplay:DISPLAY6|saida7seg[0]         ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |mips|uc:UC|pontosDeControle[6]                             ;
-; 4:1                ; 28 bits   ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |mips|fluxo_dados:FD|ULA:ULA|Mux30                          ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |mips|fluxo_dados:FD|muxGenerico2:mux_Ula_Memoria|saida[29] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |mips|fluxo_dados:FD|Registrador:PC|data_s[27] ;
+; 3:1                ; 21 bits   ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; Yes        ; |mips|fluxo_dados:FD|Registrador:PC|data_s[23] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |mips|uc:UC|pontosDeControle[6]                ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |mips|fluxo_dados:FD|ULA:ULA|Mux31             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
 
 
 +----------------------------------------------------------------------+
@@ -1219,6 +1208,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------+-------+----------------------------------------+
 ; Parameter Name      ; Value ; Type                                   ;
 +---------------------+-------+----------------------------------------+
+; quantidadeBotoes    ; 4     ; Signed Integer                         ;
 ; quantidadeLedsRed   ; 18    ; Signed Integer                         ;
 ; quantidadeLedsGreen ; 8     ; Signed Integer                         ;
 +---------------------+-------+----------------------------------------+
@@ -1471,7 +1461,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Port             ; Type   ; Severity ; Details                                                                             ;
 +------------------+--------+----------+-------------------------------------------------------------------------------------+
 ; instrucao[25..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; saidaula[31..28] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
@@ -1480,25 +1469,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 83                          ;
-; cycloneiii_ff         ; 2263                        ;
+; boundary_port         ; 152                         ;
+; cycloneiii_ff         ; 2238                        ;
 ;     ENA               ; 2208                        ;
-;     SCLR              ; 2                           ;
-;     SLD               ; 12                          ;
-;     plain             ; 41                          ;
-; cycloneiii_lcell_comb ; 1966                        ;
-;     arith             ; 72                          ;
-;         2 data inputs ; 5                           ;
-;         3 data inputs ; 67                          ;
-;     normal            ; 1894                        ;
-;         0 data inputs ; 1                           ;
+;     SLD               ; 11                          ;
+;     plain             ; 19                          ;
+; cycloneiii_lcell_comb ; 2002                        ;
+;     arith             ; 120                         ;
+;         2 data inputs ; 29                          ;
+;         3 data inputs ; 91                          ;
+;     normal            ; 1882                        ;
+;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 11                          ;
-;         2 data inputs ; 93                          ;
-;         3 data inputs ; 95                          ;
-;         4 data inputs ; 1694                        ;
+;         2 data inputs ; 28                          ;
+;         3 data inputs ; 87                          ;
+;         4 data inputs ; 1754                        ;
 ;                       ;                             ;
-; Max LUT depth         ; 16.70                       ;
-; Average LUT depth     ; 9.80                        ;
+; Max LUT depth         ; 17.30                       ;
+; Average LUT depth     ; 9.84                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1507,7 +1495,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:06     ;
+; Top            ; 00:00:04     ;
 +----------------+--------------+
 
 
@@ -1517,131 +1505,195 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Tue Nov 19 18:31:44 2019
+    Info: Processing started: Fri Nov 29 18:11:39 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mips -c mips
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file ula.vhd
-    Info (12022): Found design unit 1: ULA-behv File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/ULA.vhd Line: 24
-    Info (12023): Found entity 1: ULA File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/ULA.vhd Line: 9
+    Info (12022): Found design unit 1: ULA-behv File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/ULA.vhd Line: 24
+    Info (12023): Found entity 1: ULA File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/ULA.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file uc_ula.vhd
-    Info (12022): Found design unit 1: UC_ULA-bhv File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/UC_ULA.vhd Line: 18
-    Info (12023): Found entity 1: UC_ULA File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/UC_ULA.vhd Line: 9
+    Info (12022): Found design unit 1: UC_ULA-bhv File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/UC_ULA.vhd Line: 18
+    Info (12023): Found entity 1: UC_ULA File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/UC_ULA.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file uc.vhd
-    Info (12022): Found design unit 1: uc-bhv File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/uc.vhd Line: 20
-    Info (12023): Found entity 1: uc File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/uc.vhd Line: 9
+    Info (12022): Found design unit 1: uc-bhv File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/uc.vhd Line: 20
+    Info (12023): Found entity 1: uc File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/uc.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file somador.vhd
-    Info (12022): Found design unit 1: somador-comportamento File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/somador.vhd Line: 18
-    Info (12023): Found entity 1: somador File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/somador.vhd Line: 5
+    Info (12022): Found design unit 1: somador-comportamento File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/somador.vhd Line: 18
+    Info (12023): Found entity 1: somador File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/somador.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file soma4.vhd
-    Info (12022): Found design unit 1: soma4-comportamento File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/soma4.vhd Line: 18
-    Info (12023): Found entity 1: soma4 File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/soma4.vhd Line: 5
+    Info (12022): Found design unit 1: soma4-comportamento File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/soma4.vhd Line: 18
+    Info (12023): Found entity 1: soma4 File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/soma4.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file single_port_ram.vhd
-    Info (12022): Found design unit 1: single_port_RAM-rtl File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/single_port_RAM.vhd Line: 20
-    Info (12023): Found entity 1: single_port_RAM File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/single_port_RAM.vhd Line: 5
+    Info (12022): Found design unit 1: single_port_RAM-rtl File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/single_port_RAM.vhd Line: 20
+    Info (12023): Found entity 1: single_port_RAM File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/single_port_RAM.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file shift2_imediato.vhd
-    Info (12022): Found design unit 1: shift2_imediato-comportamento File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/shift2_imediato.vhd Line: 16
-    Info (12023): Found entity 1: shift2_imediato File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/shift2_imediato.vhd Line: 4
+    Info (12022): Found design unit 1: shift2_imediato-comportamento File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/shift2_imediato.vhd Line: 16
+    Info (12023): Found entity 1: shift2_imediato File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/shift2_imediato.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file shift2.vhd
-    Info (12022): Found design unit 1: shift2-comportamento File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/shift2.vhd Line: 16
-    Info (12023): Found entity 1: shift2 File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/shift2.vhd Line: 4
+    Info (12022): Found design unit 1: shift2-comportamento File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/shift2.vhd Line: 16
+    Info (12023): Found entity 1: shift2 File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/shift2.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file rom.vhd
-    Info (12022): Found design unit 1: ROM-assincrona File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/ROM.vhd Line: 15
-    Info (12023): Found entity 1: ROM File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/ROM.vhd Line: 6
+    Info (12022): Found design unit 1: ROM-assincrona File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/ROM.vhd Line: 15
+    Info (12023): Found entity 1: ROM File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/ROM.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file registrador.vhd
-    Info (12022): Found design unit 1: Registrador-rtl File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/Registrador.vhd Line: 26
-    Info (12023): Found entity 1: Registrador File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/Registrador.vhd Line: 8
+    Info (12022): Found design unit 1: Registrador-rtl File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/Registrador.vhd Line: 26
+    Info (12023): Found entity 1: Registrador File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/Registrador.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file muxgenerico2.vhd
-    Info (12022): Found design unit 1: muxGenerico2-comportamento File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/muxGenerico2.vhd Line: 17
-    Info (12023): Found entity 1: muxGenerico2 File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/muxGenerico2.vhd Line: 4
+    Info (12022): Found design unit 1: muxGenerico2-comportamento File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/muxGenerico2.vhd Line: 17
+    Info (12023): Found entity 1: muxGenerico2 File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/muxGenerico2.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file mips.vhd
-    Info (12022): Found design unit 1: mips-estrutural File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/mips.vhd Line: 26
-    Info (12023): Found entity 1: mips File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/mips.vhd Line: 9
+    Info (12022): Found design unit 1: mips-estrutural File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 33
+    Info (12023): Found entity 1: mips File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file fluxo_dados.vhd
-    Info (12022): Found design unit 1: fluxo_dados-estrutural File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/fluxo_dados.vhd Line: 22
-    Info (12023): Found entity 1: fluxo_dados File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/fluxo_dados.vhd Line: 9
+    Info (12022): Found design unit 1: fluxo_dados-estrutural File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/fluxo_dados.vhd Line: 24
+    Info (12023): Found entity 1: fluxo_dados File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/fluxo_dados.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file estendesinalgenerico.vhd
-    Info (12022): Found design unit 1: estendeSinalGenerico-comportamento File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/estendeSinalGenerico.vhd Line: 19
-    Info (12023): Found entity 1: estendeSinalGenerico File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/estendeSinalGenerico.vhd Line: 4
+    Info (12022): Found design unit 1: estendeSinalGenerico-comportamento File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/estendeSinalGenerico.vhd Line: 19
+    Info (12023): Found entity 1: estendeSinalGenerico File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/estendeSinalGenerico.vhd Line: 4
 Info (12021): Found 1 design units, including 0 entities, in source file constantesmips.vhd
-    Info (12022): Found design unit 1: constantesMIPS File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/constantesMIPS.vhd Line: 5
+    Info (12022): Found design unit 1: constantesMIPS File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/constantesMIPS.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file clock_generator.vhd
-    Info (12022): Found design unit 1: clock_generator-test File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/clock_generator.vhd Line: 18
-    Info (12023): Found entity 1: clock_generator File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/clock_generator.vhd Line: 4
+    Info (12022): Found design unit 1: clock_generator-test File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/clock_generator.vhd Line: 18
+    Info (12023): Found entity 1: clock_generator File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/clock_generator.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file bancoregistradores.vhd
-    Info (12022): Found design unit 1: bancoRegistradores-rtl File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/bancoRegistradores.vhd Line: 30
-    Info (12023): Found entity 1: bancoRegistradores File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/bancoRegistradores.vhd Line: 6
+    Info (12022): Found design unit 1: bancoRegistradores-rtl File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/bancoRegistradores.vhd Line: 30
+    Info (12023): Found entity 1: bancoRegistradores File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/bancoRegistradores.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file conversorhex7segdisplay.vhd
-    Info (12022): Found design unit 1: conversorHex7SegDisplay-comportamento File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/conversorHex7SegDisplay.vhd Line: 16
-    Info (12023): Found entity 1: conversorHex7SegDisplay File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/conversorHex7SegDisplay.vhd Line: 4
+    Info (12022): Found design unit 1: conversorHex7SegDisplay-comportamento File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/conversorHex7SegDisplay.vhd Line: 16
+    Info (12023): Found entity 1: conversorHex7SegDisplay File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/conversorHex7SegDisplay.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file registrador_fetch.vhd
+    Info (12022): Found design unit 1: Registrador_Fetch-rtl File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/Registrador_Fetch.vhd Line: 28
+    Info (12023): Found entity 1: Registrador_Fetch File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/Registrador_Fetch.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file registrador_ex.vhd
+    Info (12022): Found design unit 1: Registrador_EX-rtl File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/Registrador_EX.vhd Line: 28
+    Info (12023): Found entity 1: Registrador_EX File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/Registrador_EX.vhd Line: 8
 Info (12127): Elaborating entity "mips" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at mips.vhd(19): used implicit default value for signal "LEDR" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/mips.vhd Line: 19
-Warning (10541): VHDL Signal Declaration warning at mips.vhd(20): used implicit default value for signal "LEDG" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/mips.vhd Line: 20
-Warning (10541): VHDL Signal Declaration warning at mips.vhd(22): used implicit default value for signal "HEX7" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/mips.vhd Line: 22
-Info (12128): Elaborating entity "fluxo_dados" for hierarchy "fluxo_dados:FD" File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/mips.vhd Line: 44
-Info (12128): Elaborating entity "bancoRegistradores" for hierarchy "fluxo_dados:FD|bancoRegistradores:BR" File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/fluxo_dados.vhd Line: 85
-Info (12128): Elaborating entity "ULA" for hierarchy "fluxo_dados:FD|ULA:ULA" File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/fluxo_dados.vhd Line: 102
-Info (12128): Elaborating entity "UC_ULA" for hierarchy "fluxo_dados:FD|UC_ULA:UCULA" File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/fluxo_dados.vhd Line: 115
-Info (12128): Elaborating entity "Registrador" for hierarchy "fluxo_dados:FD|Registrador:PC" File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/fluxo_dados.vhd Line: 124
-Info (12128): Elaborating entity "somador" for hierarchy "fluxo_dados:FD|somador:Somador_imediato" File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/fluxo_dados.vhd Line: 136
-Info (12128): Elaborating entity "soma4" for hierarchy "fluxo_dados:FD|soma4:Somador" File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/fluxo_dados.vhd Line: 146
-Info (12128): Elaborating entity "ROM" for hierarchy "fluxo_dados:FD|ROM:ROM" File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/fluxo_dados.vhd Line: 156
-Info (12128): Elaborating entity "single_port_RAM" for hierarchy "fluxo_dados:FD|single_port_RAM:RAM" File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/fluxo_dados.vhd Line: 167
-Info (12128): Elaborating entity "estendeSinalGenerico" for hierarchy "fluxo_dados:FD|estendeSinalGenerico:extensor" File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/fluxo_dados.vhd Line: 182
-Info (12128): Elaborating entity "shift2_imediato" for hierarchy "fluxo_dados:FD|shift2_imediato:shift" File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/fluxo_dados.vhd Line: 192
-Info (12128): Elaborating entity "shift2" for hierarchy "fluxo_dados:FD|shift2:shift_jump" File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/fluxo_dados.vhd Line: 202
-Info (12128): Elaborating entity "muxGenerico2" for hierarchy "fluxo_dados:FD|muxGenerico2:mux_Ula_Memoria" File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/fluxo_dados.vhd Line: 212
-Info (12128): Elaborating entity "muxGenerico2" for hierarchy "fluxo_dados:FD|muxGenerico2:mux_Rd_Rt" File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/fluxo_dados.vhd Line: 223
-Info (12128): Elaborating entity "uc" for hierarchy "uc:UC" File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/mips.vhd Line: 53
-Info (12128): Elaborating entity "conversorHex7SegDisplay" for hierarchy "conversorHex7SegDisplay:DISPLAY0" File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/mips.vhd Line: 61
+Warning (10541): VHDL Signal Declaration warning at mips.vhd(22): used implicit default value for signal "LEDR" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 22
+Warning (10541): VHDL Signal Declaration warning at mips.vhd(23): used implicit default value for signal "LEDG" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 23
+Warning (10541): VHDL Signal Declaration warning at mips.vhd(29): used implicit default value for signal "HEX7" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+Warning (10541): VHDL Signal Declaration warning at mips.vhd(40): used implicit default value for signal "saidaULA" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 40
+Warning (10036): Verilog HDL or VHDL warning at mips.vhd(41): object "clk_but" assigned a value but never read File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 41
+Info (12128): Elaborating entity "fluxo_dados" for hierarchy "fluxo_dados:FD" File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 54
+Info (12128): Elaborating entity "bancoRegistradores" for hierarchy "fluxo_dados:FD|bancoRegistradores:BR" File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/fluxo_dados.vhd Line: 126
+Info (12128): Elaborating entity "ULA" for hierarchy "fluxo_dados:FD|ULA:ULA" File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/fluxo_dados.vhd Line: 143
+Info (12128): Elaborating entity "UC_ULA" for hierarchy "fluxo_dados:FD|UC_ULA:UCULA" File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/fluxo_dados.vhd Line: 156
+Info (12128): Elaborating entity "Registrador" for hierarchy "fluxo_dados:FD|Registrador:PC" File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/fluxo_dados.vhd Line: 165
+Info (12128): Elaborating entity "somador" for hierarchy "fluxo_dados:FD|somador:Somador_imediato" File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/fluxo_dados.vhd Line: 177
+Info (12128): Elaborating entity "soma4" for hierarchy "fluxo_dados:FD|soma4:Somador" File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/fluxo_dados.vhd Line: 187
+Info (12128): Elaborating entity "ROM" for hierarchy "fluxo_dados:FD|ROM:ROM" File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/fluxo_dados.vhd Line: 197
+Info (12128): Elaborating entity "single_port_RAM" for hierarchy "fluxo_dados:FD|single_port_RAM:RAM" File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/fluxo_dados.vhd Line: 208
+Info (12128): Elaborating entity "estendeSinalGenerico" for hierarchy "fluxo_dados:FD|estendeSinalGenerico:extensor" File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/fluxo_dados.vhd Line: 223
+Info (12128): Elaborating entity "shift2_imediato" for hierarchy "fluxo_dados:FD|shift2_imediato:shift" File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/fluxo_dados.vhd Line: 233
+Info (12128): Elaborating entity "shift2" for hierarchy "fluxo_dados:FD|shift2:shift_jump" File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/fluxo_dados.vhd Line: 243
+Info (12128): Elaborating entity "muxGenerico2" for hierarchy "fluxo_dados:FD|muxGenerico2:mux_Ula_Memoria" File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/fluxo_dados.vhd Line: 253
+Info (12128): Elaborating entity "muxGenerico2" for hierarchy "fluxo_dados:FD|muxGenerico2:mux_Rd_Rt" File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/fluxo_dados.vhd Line: 264
+Info (12128): Elaborating entity "uc" for hierarchy "uc:UC" File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 65
+Info (12128): Elaborating entity "conversorHex7SegDisplay" for hierarchy "conversorHex7SegDisplay:DISPLAY0" File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 73
 Info (276014): Found 2 instances of uninferred RAM logic
-    Info (276007): RAM logic "fluxo_dados:FD|bancoRegistradores:BR|bancoReg" is uninferred due to asynchronous read logic File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/bancoRegistradores.vhd Line: 56
-    Info (276007): RAM logic "fluxo_dados:FD|single_port_RAM:RAM|ram" is uninferred due to asynchronous read logic File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/single_port_RAM.vhd Line: 23
+    Info (276007): RAM logic "fluxo_dados:FD|bancoRegistradores:BR|bancoReg" is uninferred due to asynchronous read logic File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/bancoRegistradores.vhd Line: 56
+    Info (276007): RAM logic "fluxo_dados:FD|single_port_RAM:RAM|ram" is uninferred due to asynchronous read logic File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/single_port_RAM.vhd Line: 23
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDR[0]" is stuck at GND File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/mips.vhd Line: 19
-    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/mips.vhd Line: 19
-    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/mips.vhd Line: 19
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/mips.vhd Line: 19
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/mips.vhd Line: 19
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/mips.vhd Line: 19
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/mips.vhd Line: 19
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/mips.vhd Line: 19
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/mips.vhd Line: 19
-    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/mips.vhd Line: 19
-    Warning (13410): Pin "LEDR[10]" is stuck at GND File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/mips.vhd Line: 19
-    Warning (13410): Pin "LEDR[11]" is stuck at GND File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/mips.vhd Line: 19
-    Warning (13410): Pin "LEDR[12]" is stuck at GND File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/mips.vhd Line: 19
-    Warning (13410): Pin "LEDR[13]" is stuck at GND File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/mips.vhd Line: 19
-    Warning (13410): Pin "LEDR[14]" is stuck at GND File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/mips.vhd Line: 19
-    Warning (13410): Pin "LEDR[15]" is stuck at GND File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/mips.vhd Line: 19
-    Warning (13410): Pin "LEDR[16]" is stuck at GND File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/mips.vhd Line: 19
-    Warning (13410): Pin "LEDR[17]" is stuck at GND File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/mips.vhd Line: 19
-    Warning (13410): Pin "LEDG[0]" is stuck at GND File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/mips.vhd Line: 20
-    Warning (13410): Pin "LEDG[1]" is stuck at GND File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/mips.vhd Line: 20
-    Warning (13410): Pin "LEDG[2]" is stuck at GND File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/mips.vhd Line: 20
-    Warning (13410): Pin "LEDG[3]" is stuck at GND File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/mips.vhd Line: 20
-    Warning (13410): Pin "LEDG[4]" is stuck at GND File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/mips.vhd Line: 20
-    Warning (13410): Pin "LEDG[5]" is stuck at GND File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/mips.vhd Line: 20
-    Warning (13410): Pin "LEDG[6]" is stuck at GND File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/mips.vhd Line: 20
-    Warning (13410): Pin "LEDG[7]" is stuck at GND File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/mips.vhd Line: 20
-    Warning (13410): Pin "HEX7[0]" is stuck at GND File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/mips.vhd Line: 22
-    Warning (13410): Pin "HEX7[1]" is stuck at GND File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/mips.vhd Line: 22
-    Warning (13410): Pin "HEX7[2]" is stuck at GND File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/mips.vhd Line: 22
-    Warning (13410): Pin "HEX7[3]" is stuck at GND File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/mips.vhd Line: 22
-    Warning (13410): Pin "HEX7[4]" is stuck at GND File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/mips.vhd Line: 22
-    Warning (13410): Pin "HEX7[5]" is stuck at GND File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/mips.vhd Line: 22
-    Warning (13410): Pin "HEX7[6]" is stuck at GND File: C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/mips.vhd Line: 22
+    Warning (13410): Pin "LEDR[0]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 22
+    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 22
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 22
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 22
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 22
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 22
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 22
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 22
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 22
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 22
+    Warning (13410): Pin "LEDR[10]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 22
+    Warning (13410): Pin "LEDR[11]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 22
+    Warning (13410): Pin "LEDR[12]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 22
+    Warning (13410): Pin "LEDR[13]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 22
+    Warning (13410): Pin "LEDR[14]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 22
+    Warning (13410): Pin "LEDR[15]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 22
+    Warning (13410): Pin "LEDR[16]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 22
+    Warning (13410): Pin "LEDR[17]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 22
+    Warning (13410): Pin "LEDG[0]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 23
+    Warning (13410): Pin "LEDG[1]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 23
+    Warning (13410): Pin "LEDG[2]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 23
+    Warning (13410): Pin "LEDG[3]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 23
+    Warning (13410): Pin "LEDG[4]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 23
+    Warning (13410): Pin "LEDG[5]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 23
+    Warning (13410): Pin "LEDG[6]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 23
+    Warning (13410): Pin "LEDG[7]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 23
+    Warning (13410): Pin "pcWF[0]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 26
+    Warning (13410): Pin "pcWF[1]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 26
+    Warning (13410): Pin "HEX0[0]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX0[1]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX0[2]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX0[3]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX0[4]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX0[5]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX0[6]" is stuck at VCC File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX1[0]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX1[1]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX1[2]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX1[3]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX1[4]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX1[5]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX1[6]" is stuck at VCC File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX2[0]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX2[1]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX2[2]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX2[3]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX2[4]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX2[5]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX2[6]" is stuck at VCC File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX3[0]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX3[1]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX3[2]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX3[3]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX3[4]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX3[5]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX3[6]" is stuck at VCC File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX4[0]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX4[1]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX4[2]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX4[3]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX4[4]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX4[5]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX4[6]" is stuck at VCC File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX5[0]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX5[1]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX5[2]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX5[3]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX5[4]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX5[5]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX5[6]" is stuck at VCC File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX6[0]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX6[1]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX6[2]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX6[3]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX6[4]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX6[5]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX6[6]" is stuck at VCC File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX7[0]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX7[1]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX7[2]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX7[3]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX7[4]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX7[5]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
+    Warning (13410): Pin "HEX7[6]" is stuck at GND File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 29
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 792 registers lost all their fanouts during netlist optimizations.
+Info (17049): 768 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 4247 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 1 input pins
-    Info (21059): Implemented 82 output pins
-    Info (21061): Implemented 4164 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 37 warnings
-    Info: Peak virtual memory: 4807 megabytes
-    Info: Processing ended: Tue Nov 19 18:32:05 2019
-    Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:29
+Warning (21074): Design contains 4 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY[0]" File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 20
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 20
+    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 20
+    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd Line: 20
+Info (21057): Implemented 4351 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 147 output pins
+    Info (21061): Implemented 4199 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 95 warnings
+    Info: Peak virtual memory: 4808 megabytes
+    Info: Processing ended: Fri Nov 29 18:11:58 2019
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:34
 
 

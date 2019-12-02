@@ -1,5 +1,5 @@
 Restore Archived Project report for mips
-Tue Nov 19 17:56:57 2019
+Fri Nov 29 19:45:37 2019
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------+
 ; Restore Archived Project Summary                                        ;
 +---------------------------------+---------------------------------------+
-; Restore Archived Project Status ; Successful - Tue Nov 19 17:56:57 2019 ;
+; Restore Archived Project Status ; Successful - Fri Nov 29 19:45:37 2019 ;
 ; Revision Name                   ; mips                                  ;
 ; Top-level Entity Name           ; mips                                  ;
 ; Family                          ; Cyclone IV E                          ;
@@ -46,18 +46,25 @@ refer to the applicable agreement for further details.
 +-----------------------------------+
 ; Restore Archived Project Messages ;
 +-----------------------------------+
-Info: Successfully restored 'C:/Users/victo/Downloads/mips-SemUC_restored/mips.qar' into the 'C:/Users/victo/Downloads/mips-SemUC_restored/mips_restored/' directory
+Info: Successfully restored 'C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips.qar' into the 'C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/' directory
 Info: Generated report 'mips.restore.rpt'
 Info (23030): Evaluation of Tcl script c:/intelfpga_lite/17.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
-Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4825 megabytes
-    Info: Processing ended: Tue Nov 19 17:56:57 2019
+Info: Quartus Prime Shell was successful. 0 errors, 22 warnings
+    Info: Peak virtual memory: 4828 megabytes
+    Info: Processing ended: Fri Nov 29 19:45:37 2019
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 
++----------------+
+; Files Restored ;
++----------------+
+; File Name      ;
++----------------+
+
+
 +--------------------------+
-; Files Restored           ;
+; Files Not Restored       ;
 +--------------------------+
 ; File Name                ;
 +--------------------------+
@@ -83,12 +90,5 @@ Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
 ; somador.vhd              ;
 ; uc.vhd                   ;
 +--------------------------+
-
-
-+--------------------+
-; Files Not Restored ;
-+--------------------+
-; File Name          ;
-+--------------------+
 
 

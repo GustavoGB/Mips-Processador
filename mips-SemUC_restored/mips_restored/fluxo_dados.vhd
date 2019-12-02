@@ -15,14 +15,16 @@ entity fluxo_dados is
         clk			            : IN STD_LOGIC;
         pontosDeControle        : IN STD_LOGIC_VECTOR(CONTROLWORD_WIDTH-1 DOWNTO 0);
         instrucao               : OUT STD_LOGIC_VECTOR(DATA_WIDTH-1 DOWNTO 0);
-		  saidaULA 					  : OUT STD_LOGIC_VECTOR(31 downto 0)
+		  pcWF 						  : OUT STD_LOGIC_VECTOR(DATA_WIDTH-1 DOWNTO 0);
+		  saidaULA 					  : OUT STD_LOGIC_VECTOR(31 downto 0);
+		  ZWF 						  : OUT STD_LOGIC
     );
 end entity;
 
 architecture estrutural of fluxo_dados is
 
     -- Declaração de sinais auxiliares
-    
+    signal inst_fetch : std_logic_vector(DATA_WIDTH-1 DOWNTO 0);
     -- Sinais auxiliar da instrução
     signal instrucao_s : std_logic_vector(DATA_WIDTH-1 downto 0);
 
@@ -74,7 +76,46 @@ architecture estrutural of fluxo_dados is
 
 begin
 
-    instrucao <= instrucao_s;
+--    F/ID: entity work.Registrador_Fetch
+--			port map (
+--				clk	    <= clk,
+--				enable	: '1',
+--				reset   : '0',
+--				data_in	    : instrucao_s,
+--				data_in2 : PC_mais_4,
+--				data_out	: inst_fetch,
+--				data_out2 : fetch_PC_4
+--			);
+--
+--    ID/EX: entity work.Registrador_EX
+--			port map (
+--				clk	    <= clk,
+--				enable	: '1',
+--				reset   : '0',
+--				data_in1	    : instrucao_s, 
+--				data_in2	    : instrucao_s, 
+--				data_out	: 
+--			);
+--
+--    EX/MEM: entity work.Registrador
+--			port map (
+--				clk	    <= clk,
+--				enable	: '1',
+--				reset   : '0',
+--				data_in	    : instrucao_s,
+--				data_out	: inst_fetch
+--			);
+--	 
+--    MEM/WB: entity work.Registrador
+--			port map (
+--				clk	    <= clk,
+--				enable	: '1',
+--				reset   : '0',
+--				data_in	    : instrucao_s,
+--				data_out	: inst_fetch
+--			);
+	 
+	 instrucao <= instrucao_s; --inst_fetch;
 
     sel_mux_beq <= sel_beq AND Z_out;
 
@@ -111,7 +152,7 @@ begin
             Z   => Z_out
         );
 		  saidaULA <= saida_ula;
-    
+			ZWF <= Z_out;
     UCULA : entity work.uc_ula 
         port map
         (
@@ -132,7 +173,7 @@ begin
             enable   => '1',
             reset    => '1' -- reset negado
         );
-    
+		pcWF <= PC_s;
      Somador_imediato: entity work.somador 
         generic map (
             larguraDados => DATA_WIDTH
@@ -160,7 +201,7 @@ begin
         ) 
 		port map (
             endereco => PC_s(larguraROM-1 downto 0),
-            dado     => instrucao_s
+            dado     => instrucao_s--inst_fetch
         );
     
     -- RAM: escreve valor lido no registrador B no endereço de memória de acordo com a saída da ULA
@@ -204,7 +245,7 @@ begin
             larguraDado => 26
         )
 		port map (
-            shift_IN  => instrucao_s(25 downto 0),
+            shift_IN  => instrucao_s(25 downto 0),--inst_fetch(25 downto 0),
             shift_OUT => saida_shift_jump
         );
     

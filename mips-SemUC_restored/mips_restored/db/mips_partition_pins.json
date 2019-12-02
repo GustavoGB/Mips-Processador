@@ -4,199 +4,255 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "HEX0[0]",
+					"name" : "saida_ULAWF[0]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX0[1]",
+					"name" : "saida_ULAWF[1]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX0[2]",
+					"name" : "saida_ULAWF[2]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX0[3]",
+					"name" : "saida_ULAWF[3]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX0[4]",
+					"name" : "saida_ULAWF[4]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX0[5]",
+					"name" : "saida_ULAWF[5]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX0[6]",
+					"name" : "saida_ULAWF[6]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX1[0]",
+					"name" : "saida_ULAWF[7]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX1[1]",
+					"name" : "saida_ULAWF[8]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX1[2]",
+					"name" : "saida_ULAWF[9]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX1[3]",
+					"name" : "saida_ULAWF[10]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX1[4]",
+					"name" : "saida_ULAWF[11]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX1[5]",
+					"name" : "saida_ULAWF[12]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX1[6]",
+					"name" : "saida_ULAWF[13]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX2[0]",
+					"name" : "saida_ULAWF[14]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX2[1]",
+					"name" : "saida_ULAWF[15]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX2[2]",
+					"name" : "saida_ULAWF[16]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX2[3]",
+					"name" : "saida_ULAWF[17]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX2[4]",
+					"name" : "saida_ULAWF[18]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX2[5]",
+					"name" : "saida_ULAWF[19]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX2[6]",
+					"name" : "saida_ULAWF[20]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX3[0]",
+					"name" : "saida_ULAWF[21]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX3[1]",
+					"name" : "saida_ULAWF[22]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX3[2]",
+					"name" : "saida_ULAWF[23]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX3[3]",
+					"name" : "saida_ULAWF[24]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX3[4]",
+					"name" : "saida_ULAWF[25]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX3[5]",
+					"name" : "saida_ULAWF[26]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX3[6]",
+					"name" : "saida_ULAWF[27]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX4[0]",
+					"name" : "saida_ULAWF[28]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX4[1]",
+					"name" : "saida_ULAWF[29]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX4[2]",
+					"name" : "saida_ULAWF[30]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX4[3]",
+					"name" : "saida_ULAWF[31]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX4[4]",
+					"name" : "pcWF[2]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX4[5]",
+					"name" : "pcWF[3]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX4[6]",
+					"name" : "pcWF[4]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX5[0]",
+					"name" : "pcWF[5]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX5[1]",
+					"name" : "pcWF[6]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX5[2]",
+					"name" : "pcWF[7]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX5[3]",
+					"name" : "pcWF[8]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX5[4]",
+					"name" : "pcWF[9]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX5[5]",
+					"name" : "pcWF[10]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX5[6]",
+					"name" : "pcWF[11]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX6[0]",
+					"name" : "pcWF[12]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX6[1]",
+					"name" : "pcWF[13]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX6[2]",
+					"name" : "pcWF[14]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX6[3]",
+					"name" : "pcWF[15]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX6[4]",
+					"name" : "pcWF[16]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX6[5]",
+					"name" : "pcWF[17]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX6[6]",
+					"name" : "pcWF[18]",
+					"strict" : false
+				},
+				{
+					"name" : "pcWF[19]",
+					"strict" : false
+				},
+				{
+					"name" : "pcWF[20]",
+					"strict" : false
+				},
+				{
+					"name" : "pcWF[21]",
+					"strict" : false
+				},
+				{
+					"name" : "pcWF[22]",
+					"strict" : false
+				},
+				{
+					"name" : "pcWF[23]",
+					"strict" : false
+				},
+				{
+					"name" : "pcWF[24]",
+					"strict" : false
+				},
+				{
+					"name" : "pcWF[25]",
+					"strict" : false
+				},
+				{
+					"name" : "pcWF[26]",
+					"strict" : false
+				},
+				{
+					"name" : "pcWF[27]",
+					"strict" : false
+				},
+				{
+					"name" : "pcWF[28]",
+					"strict" : false
+				},
+				{
+					"name" : "pcWF[29]",
+					"strict" : false
+				},
+				{
+					"name" : "pcWF[30]",
+					"strict" : false
+				},
+				{
+					"name" : "pcWF[31]",
+					"strict" : false
+				},
+				{
+					"name" : "ZWF",
 					"strict" : false
 				},
 				{
