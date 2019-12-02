@@ -22,6 +22,9 @@ entity fluxo_dados is
 end entity;
 
 architecture estrutural of fluxo_dados is
+    signal wb_saida_mux_rd_rt : std_logic_vector(REGBANK_ADDR_WIDTH-1 downto 0);
+	 signal wb_uc_wb : std_logic_vector(2 downto 0);
+	 signal ex_RB : std_logic_vector(DATA_WIDTH-1 downto 0);
 
     -- Declaração de sinais auxiliares
     signal inst_fetch : std_logic_vector(DATA_WIDTH-1 DOWNTO 0);
@@ -30,6 +33,8 @@ architecture estrutural of fluxo_dados is
 
     -- Sinais auxiliares para o banco de registradores
     signal RA, RB : std_logic_vector(DATA_WIDTH-1 downto 0);
+	 signal dec_RA, dec_RB : std_logic_vector(DATA_WIDTH-1 downto 0);
+	 signal wb_saida_ula : std_logic_vector(DATA_WIDTH-1 downto 0);
 
     -- Sinais auxiliares para a ULA
     signal saida_ula : std_logic_vector(DATA_WIDTH-1 downto 0);
@@ -40,18 +45,21 @@ architecture estrutural of fluxo_dados is
 	 signal ex_PC_mais_4_mais_imediato : std_logic_vector(DATA_WIDTH-1 downto 0);
     -- Sinais auxiliares para a RAM
     signal dado_lido_mem : std_logic_vector(DATA_WIDTH-1 downto 0);
+    signal wb_dado_lido_mem : std_logic_vector(DATA_WIDTH-1 downto 0);
 
     -- Sinais auxiliares para os componentes manipuladores do imediato
     signal sinal_ext : std_logic_vector(DATA_WIDTH-1 downto 0);
 
     -- Sinais auxiliares para os componentes manipuladores do endereço de jump
     signal PC_4_concat_imed : std_logic_vector(DATA_WIDTH-1 downto 0);
+	 signal dec_PC_mais_4 : std_logic_vector(DATA_WIDTH-1 downto 0);
     signal saida_shift_jump : std_logic_vector(27 downto 0);
             
     -- Sinais auxiliares dos MUXs
     signal sel_mux_beq : std_logic;
     signal saida_mux_ula_mem, saida_mux_banco_ula, saida_mux_beq, saida_mux_jump : std_logic_vector(DATA_WIDTH-1 downto 0);
     signal saida_mux_rd_rt : std_logic_vector(REGBANK_ADDR_WIDTH-1 downto 0);
+    signal wb_saida_mux_rd_rt : std_logic_vector(REGBANK_ADDR_WIDTH-1 downto 0);
 	 signal dec_uc_wb : std_logic;
 	 signal dec_uc_m : std_logic;
 	 signal dec_uc_ex : std_logic;
@@ -74,26 +82,26 @@ architecture estrutural of fluxo_dados is
     alias sel_mux_jump      : std_logic is pontosDeControle(0);
 
     -- Parsing da instrucao
-    alias RS_addr   : std_logic_vector(REGBANK_ADDR_WIDTH-1 downto 0) is instrucao_s(25 downto 21);
-    alias RT_addr   : std_logic_vector(REGBANK_ADDR_WIDTH-1 downto 0) is instrucao_s(20 downto 16);
-    alias RD_addr   : std_logic_vector(REGBANK_ADDR_WIDTH-1 downto 0) is instrucao_s(15 downto 11);
-    alias funct     : std_logic_vector(FUNCT_WIDTH-1 downto 0) is  instrucao_s(5 DOWNTO 0);
-    alias imediato  : std_logic_vector(15 downto 0) is instrucao_s(15 downto 0);
+    alias RS_addr   : std_logic_vector(REGBANK_ADDR_WIDTH-1 downto 0) is inst_fetch(25 downto 21);
+    alias RT_addr   : std_logic_vector(REGBANK_ADDR_WIDTH-1 downto 0) is inst_fetch(20 downto 16);
+    alias RD_addr   : std_logic_vector(REGBANK_ADDR_WIDTH-1 downto 0) is inst_fetch(15 downto 11);
+    alias funct     : std_logic_vector(FUNCT_WIDTH-1 downto 0) is  inst_fetch(5 DOWNTO 0);
+    alias imediato  : std_logic_vector(15 downto 0) is inst_fetch(15 downto 0);
 
 begin
 
-    F/ID: entity work.Registrador_Fetch
+    FID: entity work.Registrador_Fetch
 			port map (
 				clk	    <= clk,
-				enable	: '1',
-				reset   : '0',
-				data_in	    : instrucao_s,
-				data_in2 : PC_mais_4,
-				data_out	: inst_fetch,
-				data_out2 : fetch_PC_4
+				enable	<= '1',
+				reset   <= '0',
+				data_in	    <= instrucao_s,
+				data_in2 <= PC_mais_4,
+				data_out	<= inst_fetch,
+				data_out2 <= fetch_PC_4
 			);
 
-    ID/EX: entity work.Registrador_EX
+    IDEX: entity work.Registrador_EX
 			port map (
 				clk	    <= clk,
 				enable	<= '1',
@@ -104,8 +112,8 @@ begin
 				sig_ext		 <= sinal_ext,
 				inst_20		 <= RT_addr,
 				inst_15 		 <= RD_addr,
-				uc_wb			 <= escreve_RC,
-				uc_m			 <= escreve_RAM,
+				uc_wb			 <= escreve_RC & sel_mux_ula_mem,
+				uc_m			 <= escreve_RAM & leitura_RAM & sel_beq,
 				uc_ex			 <= ULAop,
 				pc_out		 <= dec_PC_mais_4,
 				read_d1_out	    <= dec_RA, 
@@ -118,35 +126,43 @@ begin
 				uc_ex_out			 <= dec_uc_ex
 			);
 
-    EX/MEM: entity work.Registrador_MEM
+    EXMEM: entity work.Registrador_MEM
 			port map (
 				clk	    <= clk,
 				enable	<= '1',
 				reset   <= '0',
 				saidaULA	    <= saidaULA,
 				Z			<= Z,
-				read_d2  <= ,
+				read_d2  <= dec_RB,
 				uc_wb			 <= dec_uc_wb,
 				uc_m			 <= dec_uc_m,
 				PC_mais_4_mais_imediato <= PC_mais_4_mais_imediato,
-				data_out	<= inst_fetch
 				uc_wb_out			 <= ex_uc_wb,
 				uc_m_out			 <= ex_uc_m,
-				PC_mais_4_mais_imediato_out <= ex_PC_mais_4_mais_imediato
+				PC_mais_4_mais_imediato_out <= ex_PC_mais_4_mais_imediato,
+				Z_out <= ex_Z,
+				read_d2_out  <= ex_RB,
+				saidaULA_out <= ex_saidaULA
 			);
 	 
-    MEM/WB: entity work.Registrador
+    MEMWB: entity work.Registrador_WB
 			port map (
 				clk	    <= clk,
-				enable	: '1',
-				reset   : '0',
-				data_in	    : instrucao_s,
-				data_out	: inst_fetch
+				enable	<= '1',
+				reset   <= '0',
+				dado_ram_in	    <= dado_lido_mem,
+				saidaULA <= ex_saidaULA,
+				saida_mux_rd_rt <= saida_mux_rd_rt,
+				uc_wb <= ex_uc_wb,
+				uc_wb_out <= wb_uc_wb,
+				dado_ram_out	<= wb_dado_lido_mem,
+				saidaULA_out <= wb_saida_ula,
+				saida_mux_rd_rt_out <= wb_saida_mux_rd_rt
 			);
 	 
 	 instrucao <= inst_fetch;
 
-    sel_mux_beq <= sel_beq AND Z_out;
+    sel_mux_beq <= ex_uc_m(1 downto 0) AND ex_Z;
 
     -- Ajuste do PC para jump (concatena com imediato multiplicado por 4)
     PC_4_concat_imed <= PC_mais_4(31 downto 28) & saida_shift_jump;
@@ -160,10 +176,10 @@ begin
         port map (
             enderecoA => RS_addr,
             enderecoB => RT_addr,
-            enderecoC => saida_mux_rd_rt,
+            enderecoC => wb_saida_mux_rd_rt,
             clk          => clk,
             dadoEscritaC => saida_mux_ula_mem, 
-            escreveC     => escreve_RC,
+            escreveC     => wb_uc_wb(2 downto 1),
             saidaA       => RA,
             saidaB       => RB
         );
@@ -174,7 +190,7 @@ begin
             NUM_BITS => DATA_WIDTH
         )
 		port map (
-            A   => RA,
+            A   => dec_RA,
             B   => saida_mux_banco_ula,
             ctr => ULActr,
             C   => saida_ula,
@@ -186,7 +202,7 @@ begin
         port map
         (
             funct  => funct,
-            ALUop  => ULAop,
+            ALUop  => dec_uc_ex,
             ALUctr => ULActr
         );
      
@@ -208,8 +224,8 @@ begin
             larguraDados => DATA_WIDTH
         )
 		port map (
-            entradaA => entrada_somador_beq,
-            entradaB => PC_mais_4,
+            entradaA => dec_PC_mais_4,
+            entradaB => entrada_somador_beq,
             saida    => PC_mais_4_mais_imediato
         );
     
@@ -240,11 +256,11 @@ begin
             addrWidth => ADDR_WIDTH
         )
 		port map (
-            endereco    => saida_ula, 
-            we          => escreve_RAM,
-            re          => leitura_RAM,
+            endereco    => ex_saidaULA, 
+            we          => ex_uc_m(3 downto 2),
+            re          => ex_uc_m(2 downto 1),
             clk         => clk,
-            dado_write  => RB,
+            dado_write  => ex_RB,
             dado_read   => dado_lido_mem
         ); 
 
@@ -264,7 +280,7 @@ begin
             larguraDado => DATA_WIDTH
         )
 		port map (
-            shift_IN  => sinal_ext,
+            shift_IN  => dec_sinal_ext,
             shift_OUT => entrada_somador_beq
         );
     
@@ -284,9 +300,9 @@ begin
             larguraDados => DATA_WIDTH
         )
 		port map (
-            entradaA => saida_ula, 
+            entradaA => wb_saida_ula, 
             entradaB => dado_lido_mem, 
-            seletor  => sel_mux_ula_mem,
+            seletor  => wb_uc_wb(1 downto 0),
             saida    => saida_mux_ula_mem
         );
 	 
@@ -295,9 +311,9 @@ begin
             larguraDados => REGBANK_ADDR_WIDTH
         )
 		port map (
-            entradaA => RT_addr, 
-            entradaB => RD_addr,
-            seletor  => sel_mux_rd_rt,
+            entradaA => dec_RT_addr, 
+            entradaB => dec_RD_addr,
+            seletor  => dec_uc_ex,
             saida    => saida_mux_rd_rt
         );
 	
@@ -306,9 +322,9 @@ begin
             larguraDados => DATA_WIDTH
         )
 		port map (
-            entradaA => RB, 
+            entradaA => dec_RB, 
             entradaB => sinal_ext,  
-            seletor  => sel_mux_banco_ula,
+            seletor  => dec_uc_ex,
             saida    => saida_mux_banco_ula
         );
 		
