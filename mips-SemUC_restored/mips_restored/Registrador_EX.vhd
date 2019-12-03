@@ -16,7 +16,7 @@ entity Registrador_EX is
 	(
 				clk	    : in std_logic;
 				enable : in std_logic;
-				reset   in std_logic;
+				reset  : in std_logic;
 				pc	    : in std_logic_vector(31 downto 0); 
 				read_d1	  : in std_logic_vector(31 downto 0);   
 				read_d2	   : in std_logic_vector(31 downto 0); 
@@ -25,7 +25,7 @@ entity Registrador_EX is
 				inst_15 		 : in std_logic_vector(4 downto 0); 
 				uc_wb			 : in std_logic_vector(1 downto 0);
 				uc_m			 : in std_logic_vector(2 downto 0);
-				uc_ex			 : in std_logic_vector(2 downto 0);
+				uc_ex			 : in std_logic_vector(4 downto 0);
 				pc_out		 : out std_logic_vector(31 downto 0); 
 				read_d1_out	    : out std_logic_vector(31 downto 0);  
 				read_d2_out	    : out std_logic_vector(31 downto 0); 
@@ -34,13 +34,21 @@ entity Registrador_EX is
 				inst_15_out 		 : out std_logic_vector(4 downto 0); 
 				uc_wb_out			 : out std_logic_vector(1 downto 0);
 				uc_m_out			 : out std_logic_vector(2 downto 0);
-				uc_ex_out			: out std_logic_vector(2 downto 0)
+				uc_ex_out			: out std_logic_vector(4 downto 0)
 	);
 
 end entity;
 
 architecture rtl of Registrador_EX is
-	signal data_s, data_s1, data_s2, data_s3, data_s4, data_s5, data_s6, data_s7, data_s8 : std_logic_vector(NUM_BITS - 1 downto 0) := (OTHERS=>'0');
+	signal data_s : std_logic_vector(31 downto 0) := (OTHERS=>'0');
+	signal data_s1 : std_logic_vector(31 downto 0) := (OTHERS=>'0');
+	signal data_s2 : std_logic_vector(31 downto 0) := (OTHERS=>'0');
+	signal data_s3 : std_logic_vector(31 downto 0) := (OTHERS=>'0');
+	signal data_s4 : std_logic_vector(4 downto 0) := (OTHERS=>'0');
+	signal data_s5 : std_logic_vector(4 downto 0) := (OTHERS=>'0');
+	signal data_s6 : std_logic_vector(1 downto 0) := (OTHERS=>'0');
+	signal data_s7 : std_logic_vector(2 downto 0) := (OTHERS=>'0');
+	signal data_s8 : std_logic_vector(4 downto 0) := (OTHERS=>'0');
 begin
 	process (clk, reset)
 		begin
