@@ -39,12 +39,12 @@ package constantesMIPS is
 
     -- ALU ---
     constant readFunctULA : aluOp_t := "000";
-    constant aluOpAdd : aluOp_t := "001";
-    constant aluOpSub : aluOp_t := "010";
-    constant aluOpAnd : aluOp_t := "011";
-    constant aluOpOr  : aluOp_t := "100";
-    constant aluOpSlt : aluOp_t := "101";
-    constant aluOpDC : aluOp_t := "XXX";
+    constant aluOpAdd     : aluOp_t := "001";
+    constant aluOpSub     : aluOp_t := "010";
+    constant aluOpAnd     : aluOp_t := "011";
+    constant aluOpOr      : aluOp_t := "100";
+    constant aluOpSlt     : aluOp_t := "101";
+    constant aluOpDC      : aluOp_t := "XXX";
 
     -- ALUctr:
     -- 3: inverteA

@@ -16,7 +16,7 @@ entity bancoRegistradores is
 --
         enderecoA       : in std_logic_vector((larguraEndBancoRegs-1) downto 0);
         enderecoB       : in std_logic_vector((larguraEndBancoRegs-1) downto 0);
-        enderecoC   	: in std_logic_vector((larguraEndBancoRegs-1) downto 0);
+        enderecoC   	   : in std_logic_vector((larguraEndBancoRegs-1) downto 0);
 --
         dadoEscritaC    : in std_logic_vector((larguraDados-1) downto 0);
 --

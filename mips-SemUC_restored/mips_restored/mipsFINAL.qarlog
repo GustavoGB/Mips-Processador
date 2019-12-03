@@ -1,0 +1,54 @@
+Quartus Prime Archive log --	C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mipsFINAL.qarlog
+
+Archive:	C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mipsFINAL.qar
+Date:		Tue Dec 03 19:17:56 2019
+Quartus Prime		17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/ROM.vhd
+C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/Registrador.vhd
+C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/Registrador_EX.vhd
+C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/Registrador_Fetch.vhd
+C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/Registrador_MEM.vhd
+C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/Registrador_WB.vhd
+C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/UC_ULA.vhd
+C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/ULA.vhd
+C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/Waveform.vwf
+C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/Waveform1.vwf
+C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/Waveform10.vwf
+C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/Waveform11.vwf
+C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/Waveform12.vwf
+C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/Waveform13.vwf
+C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/Waveform2.vwf
+C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/Waveform3.vwf
+C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/Waveform4.vwf
+C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/Waveform5.vwf
+C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/Waveform6.vwf
+C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/Waveform7.vwf
+C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/Waveform8.vwf
+C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/Waveform9.vwf
+C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/assignment_defaults.qdf
+C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/bancoRegistradores.vhd
+C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/clock_generator.vhd
+C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/constantesMIPS.vhd
+C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/conversorHex7SegDisplay.vhd
+C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/estendeSinalGenerico.vhd
+C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/fluxo_dados.vhd
+C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.qpf
+C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.qsf
+C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips.vhd
+C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/mips_assignment_defaults.qdf
+C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/muxGenerico2.vhd
+C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/output_files/Waveform.vwf
+C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/output_files/Waveform1.vwf
+C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/output_files/Waveform2.vwf
+C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/shift2.vhd
+C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/shift2_imediato.vhd
+C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/single_port_RAM.vhd
+C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/soma4.vhd
+C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/somador.vhd
+C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/uc.vhd
+	======= Total: 43 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

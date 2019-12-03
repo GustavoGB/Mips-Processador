@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "11/29/2019 18:00:04"
+-- Generated on "12/03/2019 14:16:05"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          mips
 -- 
@@ -33,56 +33,41 @@ END mips_vhd_vec_tst;
 ARCHITECTURE mips_arch OF mips_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
+SIGNAL ALUopWF : STD_LOGIC_VECTOR(3 DOWNTO 0);
 SIGNAL clk : STD_LOGIC;
-SIGNAL HEX0 : STD_LOGIC_VECTOR(6 DOWNTO 0);
-SIGNAL HEX1 : STD_LOGIC_VECTOR(6 DOWNTO 0);
-SIGNAL HEX2 : STD_LOGIC_VECTOR(6 DOWNTO 0);
-SIGNAL HEX3 : STD_LOGIC_VECTOR(6 DOWNTO 0);
-SIGNAL HEX4 : STD_LOGIC_VECTOR(6 DOWNTO 0);
-SIGNAL HEX5 : STD_LOGIC_VECTOR(6 DOWNTO 0);
-SIGNAL HEX6 : STD_LOGIC_VECTOR(6 DOWNTO 0);
-SIGNAL HEX7 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL dec_RAWF : STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL dec_RBWF : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL KEY : STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL LEDG : STD_LOGIC_VECTOR(7 DOWNTO 0);
-SIGNAL LEDR : STD_LOGIC_VECTOR(17 DOWNTO 0);
 SIGNAL pcWF : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL saida_ULAWF : STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL ux_exWF : STD_LOGIC_VECTOR(4 DOWNTO 0);
+SIGNAL ZWF : STD_LOGIC;
 COMPONENT mips
 	PORT (
+	ALUopWF : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
 	clk : IN STD_LOGIC;
-	HEX0 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	HEX1 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	HEX2 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	HEX3 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	HEX4 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	HEX5 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	HEX6 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	HEX7 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	dec_RAWF : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	dec_RBWF : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
 	KEY : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-	LEDG : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-	LEDR : OUT STD_LOGIC_VECTOR(17 DOWNTO 0);
 	pcWF : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-	saida_ULAWF : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+	saida_ULAWF : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	ux_exWF : OUT STD_LOGIC_VECTOR(4 DOWNTO 0);
+	ZWF : OUT STD_LOGIC
 	);
 END COMPONENT;
 BEGIN
 	i1 : mips
 	PORT MAP (
 -- list connections between master ports and signals
+	ALUopWF => ALUopWF,
 	clk => clk,
-	HEX0 => HEX0,
-	HEX1 => HEX1,
-	HEX2 => HEX2,
-	HEX3 => HEX3,
-	HEX4 => HEX4,
-	HEX5 => HEX5,
-	HEX6 => HEX6,
-	HEX7 => HEX7,
+	dec_RAWF => dec_RAWF,
+	dec_RBWF => dec_RBWF,
 	KEY => KEY,
-	LEDG => LEDG,
-	LEDR => LEDR,
 	pcWF => pcWF,
-	saida_ULAWF => saida_ULAWF
+	saida_ULAWF => saida_ULAWF,
+	ux_exWF => ux_exWF,
+	ZWF => ZWF
 	);
 
 -- clk

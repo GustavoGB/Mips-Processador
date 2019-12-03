@@ -1,5 +1,5 @@
 Restore Archived Project report for mips
-Mon Dec 02 21:05:35 2019
+Tue Dec 03 09:47:10 2019
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------+
 ; Restore Archived Project Summary                                        ;
 +---------------------------------+---------------------------------------+
-; Restore Archived Project Status ; Successful - Mon Dec 02 21:05:35 2019 ;
+; Restore Archived Project Status ; Successful - Tue Dec 03 09:47:10 2019 ;
 ; Revision Name                   ; mips                                  ;
 ; Top-level Entity Name           ; mips                                  ;
 ; Family                          ; Cyclone IV E                          ;
@@ -49,9 +49,9 @@ refer to the applicable agreement for further details.
 Info: Successfully restored 'C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips.qar' into the 'C:/Users/victo/Documents/GitHub/Mips-Processador/mips-SemUC_restored/mips_restored/' directory
 Info: Generated report 'mips.restore.rpt'
 Info (23030): Evaluation of Tcl script c:/intelfpga_lite/17.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
-Info: Quartus Prime Shell was successful. 0 errors, 23 warnings
-    Info: Peak virtual memory: 4828 megabytes
-    Info: Processing ended: Mon Dec 02 21:05:35 2019
+Info: Quartus Prime Shell was successful. 0 errors, 22 warnings
+    Info: Peak virtual memory: 4826 megabytes
+    Info: Processing ended: Tue Dec 03 09:47:10 2019
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

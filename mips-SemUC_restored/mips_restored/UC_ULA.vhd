@@ -16,13 +16,22 @@ entity UC_ULA is
 end entity;
 
 architecture bhv of UC_ULA is	
-    --signal ALUop_s : STD_LOGIC_VECTOR(ALU_OP_WIDTH-1 DOWNTO 0);
+    signal ALUop_s : STD_LOGIC_VECTOR(ALU_OP_WIDTH-1 DOWNTO 0);
 begin
-
-	 ALUctr <= ulaCtrlAdd when (funct(5 downto 4) = "10") and (ALUop = aluOpAdd) else
-					ulaCtrlSub when (funct(5 downto 4) = "00") and (ALUop = aluOpSub) else
-					ulaCtrlAnd when (ALUop = aluOpAnd) else
-					ulaCtrlOr when  (ALUop = aluOpOr) else
-					ulaCtrlSlt when (ALUop = aluOpSlt) else "0000";
+	
+	ALUop_s <= aluOpAdd when (funct=functADD and (ALUop=readFunctULA)) else
+				aluOpSlt when (funct=functSLT and (ALUop=readFunctULA)) else
+				aluOpAnd when (funct=functAND and (ALUop=readFunctULA)) else
+				aluOpOr when (funct=functOR and (ALUop=readFunctULA)) else
+				aluOpSub when (funct=functSUB and (ALUop=readFunctULA)) else
+				ALUop when (ALUop /= readFunctULA) else "000";
+	
+	
+	
+	 ALUctr <=  ulaCtrlAdd when (ALUop_s=aluOpAdd) else
+					ulaCtrlSub when (ALUop_s=aluOpSub) else
+					ulaCtrlAnd when (ALUop_s = aluOpAnd) else
+					ulaCtrlOr when  (ALUop_s = aluOpOr)  else
+					ulaCtrlSlt when (ALUop_s = aluOpSlt) else "0000";
 
 end bhv;

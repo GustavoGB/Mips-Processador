@@ -17,6 +17,12 @@ entity fluxo_dados is
         instrucao               : OUT STD_LOGIC_VECTOR(DATA_WIDTH-1 DOWNTO 0);
 		  pcWF 						  : OUT STD_LOGIC_VECTOR(DATA_WIDTH-1 DOWNTO 0);
 		  saidaULA 					  : OUT STD_LOGIC_VECTOR(31 downto 0);
+		  ALUopWF 					  : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+		  --ux_exWF 					  : OUT STD_LOGIC_VECTOR(4 DOWNTO 0);
+		  dec_RBWF					  : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+		  dec_RAWF					  : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+		  sel_mux_jumpWF			  : OUT STD_LOGIC;
+		  sel_mux_beqWF			  : OUT STD_LOGIC;
 		  ZWF 						  : OUT STD_LOGIC
     );
 end entity;
@@ -98,24 +104,24 @@ begin
 			port map (
 				clk	   =>  clk,
 				enable	=> '1',
-				reset   => '0',
+				reset   => '1',
 				data_in	    => instrucao_s,
 				data_in2 => PC_mais_4,
 				data_out	=> inst_fetch,
 				data_out2 => fetch_PC_4
 			);
-	 instrucao <= instrucao_s;
+	 instrucao <= inst_fetch;
     IDEX: entity work.Registrador_EX
 			port map (
 				clk	    => clk,
 				enable	=> '1',
-				reset   => '0',
+				reset   => '1',
 				pc	    => fetch_PC_4, 
 				read_d1	    => RA, 
 				read_d2	    => RB, 
 				sig_ext		 => sinal_ext,
-				inst_20		 => instrucao_s(20 downto 16),
-				inst_15 		 => instrucao_s(15 downto 11),
+				inst_20		 => inst_fetch(20 downto 16),
+				inst_15 		 => inst_fetch(15 downto 11),
 				uc_wb			 => escreve_RC & sel_mux_ula_mem,
 				uc_m			 => escreve_RAM & leitura_RAM & sel_beq,
 				uc_ex			 => ULAop & sel_mux_rd_rt & sel_mux_banco_ula,
@@ -129,47 +135,49 @@ begin
 				uc_m_out			 => dec_uc_m,
 				uc_ex_out			 => dec_uc_ex
 			);
-
+			--ux_exWF <= dec_uc_ex;
+			dec_RBWF <= saida_mux_banco_ula;
+			dec_RAWF <= dec_RA;
     EXMEM: entity work.Registrador_MEM
 			port map (
-				clk	    => clk,
-				enable	=> '1',
-				reset   => '0',
+				clk	          => clk,
+				enable	       => '1',
+				reset           => '1',
 				saida_mux_rd_rt => saida_mux_rd_rt,
-				saidaULA	    => saida_ula,
-				Z			=> Z_out,
-				read_d2  => dec_RB,
-				uc_wb			 => dec_uc_wb,
-				uc_m			 => dec_uc_m,
+				saidaULA	       => saida_ula,
+				Z			       => Z_out,
+				read_d2         => dec_RB,
+				uc_wb			    => dec_uc_wb,
+				uc_m			    => dec_uc_m,
 				PC_mais_4_mais_imediato => PC_mais_4_mais_imediato,
-				uc_wb_out			 => ex_uc_wb,
+				uc_wb_out	    => ex_uc_wb,
 				uc_m_out			 => ex_uc_m,
 				PC_mais_4_mais_imediato_out => ex_PC_mais_4_mais_imediato,
 				Z_out => ex_Z,
-				read_d2_out  => ex_RB,
-				saidaULA_out => ex_saidaULA,
+				read_d2_out     => ex_RB,
+				saidaULA_out    => ex_saidaULA,
 				saida_mux_rd_rt_out => ex_saida_mux_rd_rt
 			);
-	 
+	 saidaULA <= saida_ula;
+	 ZWF <= ex_Z;
     MEMWB: entity work.Registrador_WB
 			port map (
-				clk	    => clk,
-				enable	=> '1',
-				reset   => '0',
+				clk	          => clk,
+				enable	       => '1',
+				reset           => '1',
 				dado_ram_in	    => dado_lido_mem,
-				saidaULA => ex_saidaULA,
+				saidaULA        => ex_saidaULA,
 				saida_mux_rd_rt => ex_saida_mux_rd_rt,
-				uc_wb => ex_uc_wb,
-				uc_wb_out => wb_uc_wb,
-				dado_ram_out	=> wb_dado_lido_mem,
-				saidaULA_out => wb_saida_ula,
+				uc_wb           => ex_uc_wb,
+				uc_wb_out       => wb_uc_wb,
+				dado_ram_out	 => wb_dado_lido_mem,
+				saidaULA_out    => wb_saida_ula,
 				saida_mux_rd_rt_out => wb_saida_mux_rd_rt
 			);
-	 
     sel_mux_beq <= (ex_uc_m(0) AND ex_Z);
 
     -- Ajuste do PC para jump (concatena com imediato multiplicado por 4)
-    PC_4_concat_imed <= PC_mais_4(31 downto 28) & saida_shift_jump;
+    PC_4_concat_imed <= fetch_PC_4(31 downto 28) & saida_shift_jump;
 
     -- Banco de registradores
      BR: entity work.bancoRegistradores 
@@ -178,9 +186,9 @@ begin
             larguraEndBancoRegs => 5
         )
         port map (
-            enderecoA => inst_fetch(25 downto 21),
-            enderecoB => inst_fetch(20 downto 16),
-            enderecoC => wb_saida_mux_rd_rt,
+            enderecoA    => inst_fetch(25 downto 21),
+            enderecoB    => inst_fetch(20 downto 16),
+            enderecoC    => wb_saida_mux_rd_rt,
             clk          => clk,
             dadoEscritaC => saida_mux_ula_mem, 
             escreveC     => wb_uc_wb(1),
@@ -200,8 +208,7 @@ begin
             C   => saida_ula,
             Z   => Z_out
         );
-	saidaULA <= saida_ula;
-	ZWF <= Z_out;
+
     UCULA : entity work.uc_ula 
         port map
         (
@@ -209,7 +216,7 @@ begin
             ALUop  => dec_uc_ex(4 downto 2),
             ALUctr => ULActr
         );
-     
+     ALUopWF <= ULActr;
     -- PC e somadores
      PC: entity work.Registrador
         generic map (
@@ -304,8 +311,8 @@ begin
             larguraDados => DATA_WIDTH
         )
 		port map (
-            entradaA => wb_saida_ula, 
-            entradaB => wb_dado_lido_mem, 
+            entradaA => wb_saida_ula,--wb_saida_ula, 
+            entradaB => wb_dado_lido_mem,--wb_dado_lido_mem, 
             seletor  => wb_uc_wb(0),
             saida    => saida_mux_ula_mem
         );
@@ -326,8 +333,8 @@ begin
             larguraDados => DATA_WIDTH
         )
 		port map (
-            entradaA => dec_RB, 
-            entradaB => sinal_ext,  
+            entradaA => dec_RB,
+            entradaB => dec_sinal_ext, 
             seletor  => dec_uc_ex(0),
             saida    => saida_mux_banco_ula
         );
@@ -342,7 +349,7 @@ begin
             seletor  => sel_mux_beq,
             saida    => saida_mux_beq
         );
-		
+		  sel_mux_beqWF <= sel_mux_beq;
      mux_jump: entity work.muxGenerico2 
         generic map (
             larguraDados => DATA_WIDTH
@@ -353,6 +360,7 @@ begin
             seletor  => sel_mux_jump,
             saida    => saida_mux_jump
         );
+		  sel_mux_jumpWF <= sel_mux_jump;
 		  
 
 end architecture;
