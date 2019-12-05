@@ -17,7 +17,7 @@ entity fluxo_dados is
         instrucao               : OUT STD_LOGIC_VECTOR(DATA_WIDTH-1 DOWNTO 0);
 		  pcWF 						  : OUT STD_LOGIC_VECTOR(DATA_WIDTH-1 DOWNTO 0);
 		  saidaULA 					  : OUT STD_LOGIC_VECTOR(31 downto 0);
-		  ALUopWF 					  : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+		  --ALUopWF 					  : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
 		  --ux_exWF 					  : OUT STD_LOGIC_VECTOR(4 DOWNTO 0);
 		  dec_RBWF					  : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
 		  dec_RAWF					  : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -216,7 +216,7 @@ begin
             ALUop  => dec_uc_ex(4 downto 2),
             ALUctr => ULActr
         );
-     ALUopWF <= ULActr;
+     --ALUopWF <= ULActr;
     -- PC e somadores
      PC: entity work.Registrador
         generic map (

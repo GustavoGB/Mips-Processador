@@ -2,88 +2,76 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Setup 'FlipFlop:FlipFlop|data_out'
-Slack : -5.308
-TNS   : -969.880
+Type  : Slow 1200mV 85C Model Setup 'KEY[0]'
+Slack : -5.748
+TNS   : -1043.277
 
 Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
-Slack : -0.984
-TNS   : -0.984
-
-Type  : Slow 1200mV 85C Model Hold 'FlipFlop:FlipFlop|data_out'
-Slack : 0.334
-TNS   : 0.000
+Slack : -0.419
+TNS   : -0.419
 
 Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
-Slack : 0.783
+Slack : 0.125
 TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'KEY[0]'
+Slack : 0.184
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'KEY[0]'
+Slack : -3.000
+TNS   : -644.652
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
 TNS   : -4.285
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'KEY[0]'
-Slack : -3.000
-TNS   : -4.285
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FlipFlop:FlipFlop|data_out'
-Slack : -2.693
-TNS   : -641.652
-
-Type  : Slow 1200mV 0C Model Setup 'FlipFlop:FlipFlop|data_out'
-Slack : -4.742
-TNS   : -845.689
+Type  : Slow 1200mV 0C Model Setup 'KEY[0]'
+Slack : -5.113
+TNS   : -912.861
 
 Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
-Slack : -0.774
-TNS   : -0.774
-
-Type  : Slow 1200mV 0C Model Hold 'FlipFlop:FlipFlop|data_out'
-Slack : 0.336
-TNS   : 0.000
+Slack : -0.354
+TNS   : -0.354
 
 Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
-Slack : 0.725
+Slack : 0.124
 TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'KEY[0]'
+Slack : 0.165
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'KEY[0]'
+Slack : -3.000
+TNS   : -644.036
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
 TNS   : -4.285
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'KEY[0]'
-Slack : -3.000
-TNS   : -4.285
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FlipFlop:FlipFlop|data_out'
-Slack : -2.649
-TNS   : -641.036
-
-Type  : Fast 1200mV 0C Model Setup 'FlipFlop:FlipFlop|data_out'
-Slack : -2.156
-TNS   : -286.767
+Type  : Fast 1200mV 0C Model Setup 'KEY[0]'
+Slack : -2.401
+TNS   : -325.907
 
 Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
-Slack : -0.532
-TNS   : -0.532
-
-Type  : Fast 1200mV 0C Model Hold 'FlipFlop:FlipFlop|data_out'
-Slack : 0.130
-TNS   : 0.000
+Slack : -0.103
+TNS   : -0.103
 
 Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
-Slack : 0.486
-TNS   : 0.000
+Slack : -0.053
+TNS   : -0.053
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -3.000
-TNS   : -4.122
+Type  : Fast 1200mV 0C Model Hold 'KEY[0]'
+Slack : 0.065
+TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'KEY[0]'
 Slack : -3.000
-TNS   : -4.104
+TNS   : -546.276
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FlipFlop:FlipFlop|data_out'
-Slack : -1.000
-TNS   : -484.000
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -4.069
 
 ------------------------------------------------------------

@@ -8,7 +8,7 @@ use work.constantesMIPS.all;
 
 entity mips is
     generic (
-		  quantidadeBotoes            : natural := 4;
+		  quantidadeBotoes            : natural := 2;
         quantidadeLedsRed           : natural := 18;
         quantidadeLedsGreen         : natural := 8
     );
@@ -31,10 +31,10 @@ entity mips is
 		  sel_mux_jumpWF : OUT STD_LOGIC;
 		  sel_mux_beqWF : OUT STD_LOGIC;
 		  --opcodeWF : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
-		  ALUopWF : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+		  --ALUopWF : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
         -- DISPLAYS 7 SEG
-        HEX0, HEX1, HEX2, HEX3 : OUT STD_LOGIC_VECTOR(6 downto 0)
-		  --HEX4, HEX5, HEX6, HEX7 : OUT STD_LOGIC_VECTOR(6 downto 0)
+        HEX0, HEX1, HEX2, HEX3, HEX4, HEX5 : OUT STD_LOGIC_VECTOR(6 downto 0)
+		  --HEX6, HEX7 : OUT STD_LOGIC_VECTOR(6 downto 0)
     );
 end entity;
 
@@ -55,11 +55,6 @@ architecture estrutural of mips is
     alias opcode : std_logic_vector(OPCODE_WIDTH-1 downto 0) is instrucao(31 DOWNTO 26);
 begin
 	 pc_led <= pcWF;
-	 LEDR <= pc_led(17 downto 0);
-    HEX0 <= saida_ULAWF(6 downto 0);	
-    HEX1 <= saida_ULAWF(13 downto 7);	
-    HEX2 <= saida_ULAWF(20 downto 14);	
-    HEX3 <= saida_ULAWF(27 downto 21);	
      --CLOCK generator auxiliar para simulação
      --CG : entity work.clock_generator port map (clk	=> clk);
 
@@ -69,17 +64,17 @@ begin
         clk	                    => clk_but , --clk,
         pontosDeControle        => pontosDeControle,
         instrucao               => instrucao,
-		  saidaULA => saida_ULAWF,
+		  saidaULA => saidaULA,
 		  pcWF => pcWF,
 		  ZWF => ZWF,
 		  --ux_exWF => ux_exWF,
 		  dec_RBWF => dec_RBWF,
 		  dec_RAWF => dec_RAWF,
 		  sel_mux_jumpWF => sel_mux_jumpWF,
-		  sel_mux_beqWF => sel_mux_beqWF,
-		  ALUopWF => ALUopWF
+		  sel_mux_beqWF => sel_mux_beqWF
+		  --ALUopWF => ALUopWF
     );
-
+	saida_ULAWF <= saidaULA;
     UC : entity work.uc 
 	port map
 	(
@@ -88,18 +83,75 @@ begin
     );
 	 --opcodeWF <= opcode;
 	 
-	 FlipFlop : entity work.FlipFlop
-	 port map
-	 (
-		data_out => Q,
-		clk      => KEY(0),
-		reset    => KEY(1) -- reset negado
- );
+--	 FlipFlop : entity work.FlipFlop
+--	 port map
+--	 (
+--		data_out => Q,
+--		clk      => KEY(0),
+--		reset    => KEY(1) -- reset negado
+-- );
 	detector : entity work.edgeDetector
 	port map
 	(
 		clk => CLOCK_50,
-		entrada => Q,
+		entrada => not KEY(0),
 		saida => clk_but
+	);
+	
+	
+		LEDR <= pc_led(17 downto 0);
+--    HEX0 <= saida_ULAWF(6 downto 0);	
+--    HEX1 <= saida_ULAWF(13 downto 7);	
+--    HEX2 <= saida_ULAWF(20 downto 14);	
+--    HEX3 <= saida_ULAWF(27 downto 21);	
+	 
+	H0 : entity work.conversorHex7SegDisplay
+	port map
+	(
+		  --clk         => clk_but,
+        dadoHex     => saidaULA(3 downto 0), -- que veio da ULA
+        habilita    => '1',
+        saida7seg   => HEX0
+	);
+	
+	H1 : entity work.conversorHex7SegDisplay
+	port map
+	(
+		  --clk         => clk_but,
+        dadoHex     => saidaULA(7 downto 4), -- que veio da ULA
+        habilita    => '1',
+        saida7seg   => HEX1
+	);	
+	H2 : entity work.conversorHex7SegDisplay
+	port map
+	(
+		  --clk         => clk_but,
+        dadoHex     => saidaULA(11 downto 8), -- que veio da ULA
+        habilita    => '1',
+        saida7seg   => HEX2
+	);
+	H3 : entity work.conversorHex7SegDisplay
+	port map
+	(
+		  --clk         => clk_but,
+        dadoHex     => saidaULA(15 downto 12), -- que veio da ULA
+        habilita    => '1',
+        saida7seg   => HEX3
+	);
+	H4 : entity work.conversorHex7SegDisplay
+	port map
+	(
+		  --clk         => clk_but,
+        dadoHex     => pc_led(3 downto 0),
+        habilita    => '1',
+        saida7seg   => HEX4
+	);
+	H5 : entity work.conversorHex7SegDisplay
+	port map
+	(
+		  --clk         => clk_but,
+        dadoHex     => pc_led(7 downto 4), 
+        habilita    => '1',
+        saida7seg   => HEX5
 	);
 end architecture;
